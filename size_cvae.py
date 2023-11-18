@@ -16,8 +16,10 @@ from torchsummary import summary
 from utils.get_dataset import *
 from contextlib import nullcontext
 from dataclasses import dataclass
-import datetime  
-device = 'cpu'
+import datetime
+import random  
+import matplotlib.pyplot as plt
+device = 'cuda'
 
 class SizeEncoder(nn.Module):
     def __init__(self, input_dim, condition_dim, hidden_dims, latent_dim):
@@ -81,7 +83,7 @@ def train(encoder, decoder, dataset, optimizer):
         optimizer.zero_grad()
         size_data, condition = size_data.float().to(device), condition.float().to(device)
         mu, var = encoder(size_data, condition)
-        z = reparameterize(mu, var)
+        z = reparameterize(mu, var)#z.shape=(batch_size,latent_dim)
         y = decoder(z, condition)
         recon_loss = F.l1_loss(y, size_data)
         max_recon_loss = torch.max(torch.abs(y - size_data).mean(dim=1))
@@ -101,7 +103,43 @@ def train(encoder, decoder, dataset, optimizer):
     return epoch_loss, epoch_recon, epoch_kld, epoch_max_loss
 
 
-def get_locality(pairdata, freqpairs):
+def eval(decoder,sizedata,locality,latent_dim,step=0):
+    t0=time.time()
+
+    test_size=1000
+    bins=20
+    decoder.eval()
+    with torch.no_grad():
+        matrix=torch.zeros((test_size,len(sizedata)))
+        condition = []
+        for i in range(test_size):
+            condition.append(locality[random.randint(0,len(dataset)-1)])
+        condition=torch.Tensor(np.array(condition)).float().to(device)
+        z=torch.randn([test_size,latent_dim]).to(device)
+        y=decoder(z,condition).cpu()
+        # print(y.shape)#y.shape=[test_size, 类别数=65]
+        for i in range(test_size):
+            abs_diff = np.abs(y[i]-sizedata)
+            matrix[i,:]=torch.sum(abs_diff,dim=1)
+            # for j in range(len(dataset)):
+            #     matrix[i][j] = sum(abs(y[i]-dataset[j][0]))/dataset[j][0].shape[0]
+        column_min,column_posi=torch.min(matrix,dim=0)
+        row_min,row_posi=torch.min(matrix,dim=1)
+        plt.hist(column_min,bins=bins,density=True,cumulative=True,color='blue')
+        plt.hist(row_min,bins=bins,density=True,cumulative=True,color='yellow')
+        plt.savefig('result/{date}/'.format(date=date)+str(step)+".png")
+        row_posi=torch.unique(row_posi)
+        print("coverage for testsize "+str(test_size)+" is :"+str(len(row_posi)/test_size))
+        print("eval in"+str(time.time()-t0))
+        plt.close()
+        # print(matrix.shape)
+        # print(matrix)
+
+
+
+def get_locality(pairdata, freqpairs,pairsize):
+    latent_size = 128
+    
     src_count, dst_count = defaultdict(int), defaultdict(int)
     src_ip, dst_ip = [], []
 
@@ -113,6 +151,7 @@ def get_locality(pairdata, freqpairs):
 
     max_src_count = np.max(list(src_count.values()))
     max_dst_count = np.max(list(dst_count.values()))
+    print("maxsrccount"+str(max_src_count)+"maxdstcount"+str(max_dst_count))
     condition_size = max_src_count + max_dst_count + 2
 
     locality_strings = []
@@ -132,18 +171,21 @@ def get_locality(pairdata, freqpairs):
 
 if __name__ == "__main__":
     t0 = time.time()
+    random.seed(114514)
     # read data
-    traces = 100000
-    pairdata, freqpairs, n_size, n_interval = get_fb_data(traces)
+    traces = 1145
+    pairdata, freqpairs, n_size, n_interval,pairsize = get_fb_data(traces)
     sizedata = get_data(pairdata, freqpairs, 'size_index', n_size)
     intervaldata = get_data(pairdata, freqpairs, 'interval_index', n_interval)
     print('read data in %dm %ds' % ((time.time() - t0) / 60, (time.time() - t0) % 60))
 
     # get locality
-    locality_strings, locality_onehots, pair_counts, condition_size = get_locality(pairdata, freqpairs)
+    locality_strings, locality_onehots, pair_counts, condition_size = get_locality(pairdata, freqpairs,pairsize)
     print('get locality in %dm %ds' % ((time.time() - t0) / 60, (time.time() - t0) % 60))
     dataset = [pair for pair in zip(sizedata, locality_onehots)]
-
+    # print(dataset[0][0].shape)
+    # exit()
+    
     hidden_dims = [768, 512, 256]
     latent_dim = 32
     encoder = SizeEncoder(n_size, condition_size, hidden_dims, latent_dim).to(device)
@@ -165,6 +207,9 @@ if __name__ == "__main__":
     if os.path.exists('model/{date}/'.format(date=date)):
         os.system('rm -r model/{date}/'.format(date=date))
     os.makedirs('model/{date}/'.format(date=date))
+    if os.path.exists('result/{date}/'.format(date=date)):
+        os.system('rm -r result/{date}/'.format(date=date))
+    os.makedirs('result/{date}/'.format(date=date))
 
     start_time = time.time()
     avg_loss = 0
@@ -177,6 +222,7 @@ if __name__ == "__main__":
             avg_loss /= print_every
             cur_time = time.time()
             print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time))
+            eval(decoder,sizedata,locality_onehots,latent_dim,epoch)
             if avg_loss < min_loss:
                 min_loss = avg_loss
                 torch.save(encoder, 'model/{date}/encoder.pth'.format(date=date))

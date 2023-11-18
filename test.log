@@ -1,0 +1,67 @@
+read data in 0m 0s
+maxsrccount2maxdstcount2
+get locality in 0m 0s
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                  [-1, 768]          55,296
+              ReLU-2                  [-1, 768]               0
+            Linear-3                  [-1, 512]         393,728
+              ReLU-4                  [-1, 512]               0
+            Linear-5                  [-1, 256]         131,328
+              ReLU-6                  [-1, 256]               0
+            Linear-7                   [-1, 32]           8,224
+            Linear-8                   [-1, 32]           8,224
+================================================================
+Total params: 596,800
+Trainable params: 596,800
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.02
+Params size (MB): 2.28
+Estimated Total Size (MB): 2.30
+----------------------------------------------------------------
+encoder: None
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                  [-1, 256]           9,984
+              ReLU-2                  [-1, 256]               0
+            Linear-3                  [-1, 512]         131,584
+              ReLU-4                  [-1, 512]               0
+            Linear-5                  [-1, 768]         393,984
+              ReLU-6                  [-1, 768]               0
+            Linear-7                   [-1, 65]          49,985
+================================================================
+Total params: 585,537
+Trainable params: 585,537
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.02
+Params size (MB): 2.23
+Estimated Total Size (MB): 2.26
+----------------------------------------------------------------
+decoder: None
+start in: 2023/11/17 08:22:00
+epoch=100, avg_loss=1.42e-02, kld=1.49, recon=6.14e-03(max=2.75e-02), time=1.33
+save model
+epoch=200, avg_loss=8.76e-03, kld=3.46, recon=6.00e-03(max=2.67e-02), time=2.63
+save model
+epoch=300, avg_loss=8.51e-03, kld=12.02, recon=5.81e-03(max=2.43e-02), time=3.97
+save model
+epoch=400, avg_loss=7.99e-03, kld=17.76, recon=5.44e-03(max=1.74e-02), time=5.31
+save model
+epoch=500, avg_loss=6.79e-03, kld=17.63, recon=4.85e-03(max=1.49e-02), time=6.64
+save model
+epoch=600, avg_loss=5.87e-03, kld=22.34, recon=4.16e-03(max=1.18e-02), time=7.97
+save model
+epoch=700, avg_loss=5.41e-03, kld=21.97, recon=3.92e-03(max=1.17e-02), time=9.30
+save model
+epoch=800, avg_loss=5.19e-03, kld=23.21, recon=3.68e-03(max=1.17e-02), time=10.64
+save model
+epoch=900, avg_loss=4.96e-03, kld=23.43, recon=3.46e-03(max=1.17e-02), time=11.97
+save model
+epoch=1000, avg_loss=4.78e-03, kld=22.47, recon=3.28e-03(max=1.17e-02), time=13.30
+save model

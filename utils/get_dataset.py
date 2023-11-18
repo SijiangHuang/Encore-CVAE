@@ -4,6 +4,7 @@ import numpy as np
 def get_fb_data(n_pairs):
     pairdata = {}
     freqpairs = []
+    pairsize = []
     cdf_size = pd.read_csv('dataset/fb/size_cdf.csv')
     cdf_interval = pd.read_csv('dataset/fb/interval_cdf.csv')
     n_size, n_interval = len(cdf_size), len(cdf_interval)
@@ -12,7 +13,8 @@ def get_fb_data(n_pairs):
         pair = data['ip_pair'].iloc[0]
         pairdata[pair] = data
         freqpairs.append(pair)
-    return pairdata, freqpairs, n_size, n_interval
+        pairsize.append(data['size_index'].sum())
+    return pairdata, freqpairs, n_size, n_interval, pairsize
 
 
 def get_univ_data(n_pairs):
