@@ -12,13 +12,14 @@ from torch import nn, Tensor
 from typing import List
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
-from torchsummary import summary
+# from torchsummary import summary
 from utils.get_dataset import *
 from contextlib import nullcontext
 from dataclasses import dataclass
 import datetime
 import random  
 import matplotlib.pyplot as plt
+from ast import literal_eval
 device = 'cuda'
 
 class SizeEncoder(nn.Module):
@@ -30,7 +31,8 @@ class SizeEncoder(nn.Module):
             self.encoder.append(
                 nn.Sequential(
                     nn.Linear(in_dim, out_features=h_dim),
-                    nn.ReLU())
+                    nn.ReLU(),
+                    nn.LayerNorm(h_dim))
             )
             in_dim = h_dim
         self.fc_mu = nn.Linear(hidden_dims[-1], latent_dim)
@@ -54,7 +56,8 @@ class SizeDecoder(torch.nn.Module):
             self.decoder.append(
                 nn.Sequential(
                     nn.Linear(in_dim, out_features=h_dim,),
-                    nn.ReLU())
+                    nn.ReLU(),
+                    nn.LayerNorm(h_dim))
             )
             in_dim = h_dim
         self.output = nn.Linear(hidden_dims[-1], output_dim)
@@ -103,37 +106,49 @@ def train(encoder, decoder, dataset, optimizer):
     return epoch_loss, epoch_recon, epoch_kld, epoch_max_loss
 
 
-def eval(decoder,sizedata,locality,latent_dim,step=0):
+def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, test_size=100):
     t0=time.time()
-
-    test_size=1000
-    bins=20
+    # bins=20
     decoder.eval()
     with torch.no_grad():
-        matrix=torch.zeros((test_size,len(sizedata)))
-        condition = []
-        for i in range(test_size):
-            condition.append(locality[random.randint(0,len(dataset)-1)])
+        condition = random.sample(locality_onehots_dict.keys(),min(len(locality_onehots_dict.keys()),100))
+        condition = [eval(i) for i in condition]
         condition=torch.Tensor(np.array(condition)).float().to(device)
-        z=torch.randn([test_size,latent_dim]).to(device)
-        y=decoder(z,condition).cpu()
+        c_min_95 = []
+        c_min_aver = []
+        r_min_95 = []
+        r_min_aver = []
+        coverage = []
+        for cond in condition:
+            z=torch.randn([test_size,latent_dim]).to(device)
+            y=decoder(z,cond.expand(test_size,-1)).cpu()
         # print(y.shape)#y.shape=[test_size, 类别数=65]
-        for i in range(test_size):
-            abs_diff = np.abs(y[i]-sizedata)
-            matrix[i,:]=torch.sum(abs_diff,dim=1)
+            locality_key = str(list(np.array(cond.cpu())))
+            matrix=torch.zeros((test_size,len(locality_onehots_dict[locality_key])))
+            for i in range(test_size):
+                for j in range(len(locality_onehots_dict[locality_key])): 
+                    matrix[i,j]=torch.max(np.abs(y[i]-sizedata[locality_onehots_dict[locality_key][j]]))   
             # for j in range(len(dataset)):
             #     matrix[i][j] = sum(abs(y[i]-dataset[j][0]))/dataset[j][0].shape[0]
-        column_min,column_posi=torch.min(matrix,dim=0)
-        row_min,row_posi=torch.min(matrix,dim=1)
-        plt.hist(column_min,bins=bins,density=True,cumulative=True,color='blue')
-        plt.hist(row_min,bins=bins,density=True,cumulative=True,color='yellow')
-        plt.savefig('result/{date}/'.format(date=date)+str(step)+".png")
-        row_posi=torch.unique(row_posi)
-        print("coverage for testsize "+str(test_size)+" is :"+str(len(row_posi)/test_size))
-        print("eval in"+str(time.time()-t0))
-        plt.close()
-        # print(matrix.shape)
-        # print(matrix)
+            column_min,column_posi=torch.min(matrix,dim=0)
+            row_min,row_posi=torch.min(matrix,dim=1)
+            c_min_95.append(np.percentile(column_min,95))
+            c_min_aver.append(np.mean(np.array(column_min)))
+            r_min_95.append(np.percentile(row_min,95))
+            r_min_aver.append(np.mean(np.array(row_min)))
+            row_posi=torch.unique(row_posi)
+            coverage.append(len(row_posi)/len(locality_onehots_dict[locality_key]))
+        # plt.hist(column_min,bins=bins,density=True,cumulative=True,color='blue')
+        # plt.hist(row_min,bins=bins,density=True,cumulative=True,color='yellow')
+        # plt.savefig('result/{date}/'.format(date=date)+str(step)+".png")
+
+        # print("coverage for testsize "+str(test_size)+" is :"+str(len(row_posi)/test_size))
+        print("eval in"+str(time.time()-t0)+" //coverage is %.2f on average and is %.2f for the worst" %
+              (np.mean(coverage), np.percentile(coverage,1)) +
+              " //per sample error is %.2f on average and is %.2f for the worst" %(np.mean(r_min_aver),np.percentile(r_min_95,95)) +
+              " //per source data error is %.2f on average and is %.2f for the worst" %(np.mean(c_min_aver),np.percentile(c_min_95,95)))
+        # plt.close()
+
 
 
 
@@ -156,31 +171,35 @@ def get_locality(pairdata, freqpairs,pairsize):
 
     locality_strings = []
     locality_onehots = []
+    locality_onehots_dict=defaultdict(list)
+    i = 0
     for pair in freqpairs:
         locality_strings.append("{src},{dst}".format(src=src_count[pairdata[pair]['srcip'][0]], dst=dst_count[pairdata[pair]['dstip'][0]]))
         locality_onehot = np.zeros(condition_size)
         locality_onehot[src_count[pairdata[pair]['srcip'][0]]] = 1
         locality_onehot[max_src_count + dst_count[pairdata[pair]['dstip'][0]]] = 1
         locality_onehots.append(locality_onehot)
-    
+        # locality_onehot.dtype=int
+        locality_onehots_dict[str(list(locality_onehot))].append(i)
+        i+=1
     values, counts = np.unique(locality_strings, return_counts=True)
     pair_counts = dict(zip(values, counts))
 
-    return locality_strings, np.array(locality_onehots), pair_counts, condition_size
+    return locality_strings, np.array(locality_onehots), pair_counts, condition_size, locality_onehots_dict
 
 
 if __name__ == "__main__":
     t0 = time.time()
     random.seed(114514)
     # read data
-    traces = 1145
+    traces = 10000
     pairdata, freqpairs, n_size, n_interval,pairsize = get_fb_data(traces)
     sizedata = get_data(pairdata, freqpairs, 'size_index', n_size)
     intervaldata = get_data(pairdata, freqpairs, 'interval_index', n_interval)
     print('read data in %dm %ds' % ((time.time() - t0) / 60, (time.time() - t0) % 60))
 
     # get locality
-    locality_strings, locality_onehots, pair_counts, condition_size = get_locality(pairdata, freqpairs,pairsize)
+    locality_strings, locality_onehots, pair_counts, condition_size, locality_onehots_dict = get_locality(pairdata, freqpairs,pairsize)
     print('get locality in %dm %ds' % ((time.time() - t0) / 60, (time.time() - t0) % 60))
     dataset = [pair for pair in zip(sizedata, locality_onehots)]
     # print(dataset[0][0].shape)
@@ -191,12 +210,12 @@ if __name__ == "__main__":
     encoder = SizeEncoder(n_size, condition_size, hidden_dims, latent_dim).to(device)
     hidden_dims.reverse()
     decoder = SizeDecoder(latent_dim, condition_size, hidden_dims, n_size).to(device)
-    print('encoder:', summary(encoder, [[n_size], [condition_size]], device=device))
-    print('decoder:', summary(decoder, [[latent_dim], [condition_size]], device=device))
+    # print('encoder:', summary(encoder, [[n_size], [condition_size]], device=device))
+    # print('decoder:', summary(decoder, [[latent_dim], [condition_size]], device=device))
     sys.stdout.flush()
 
     lr = 1e-4
-    kld_weight = 1e-5
+    kld_weight = 1e-5#1e-4不行
     optimizer = torch.optim.Adam([{'params': encoder.parameters()}, {'params': decoder.parameters()}], lr=lr)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
     print('start in:', time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()))
@@ -222,7 +241,10 @@ if __name__ == "__main__":
             avg_loss /= print_every
             cur_time = time.time()
             print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time))
-            eval(decoder,sizedata,locality_onehots,latent_dim,epoch)
+            if epoch % (print_every*10) == 0:
+                evaluate(decoder,sizedata,locality_onehots,latent_dim,locality_onehots_dict,epoch,1000)
+            else:
+                evaluate(decoder,sizedata,locality_onehots,latent_dim,locality_onehots_dict,epoch,100)
             if avg_loss < min_loss:
                 min_loss = avg_loss
                 torch.save(encoder, 'model/{date}/encoder.pth'.format(date=date))
