@@ -19,7 +19,6 @@ from dataclasses import dataclass
 import datetime
 import random  
 import matplotlib.pyplot as plt
-from ast import literal_eval
 device = 'cuda'
 
 class SizeEncoder(nn.Module):
@@ -31,8 +30,8 @@ class SizeEncoder(nn.Module):
             self.encoder.append(
                 nn.Sequential(
                     nn.Linear(in_dim, out_features=h_dim),
-                    nn.ReLU(),
-                    nn.LayerNorm(h_dim))
+                    nn.ReLU())
+                    # ,nn.LayerNorm(h_dim))
             )
             in_dim = h_dim
         self.fc_mu = nn.Linear(hidden_dims[-1], latent_dim)
@@ -56,8 +55,8 @@ class SizeDecoder(torch.nn.Module):
             self.decoder.append(
                 nn.Sequential(
                     nn.Linear(in_dim, out_features=h_dim,),
-                    nn.ReLU(),
-                    nn.LayerNorm(h_dim))
+                    nn.ReLU())
+                    # nn.LayerNorm(h_dim))
             )
             in_dim = h_dim
         self.output = nn.Linear(hidden_dims[-1], output_dim)
