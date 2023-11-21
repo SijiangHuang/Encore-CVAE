@@ -111,7 +111,7 @@ def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, 
     # bins=20
     decoder.eval()
     with torch.no_grad():
-        condition = random.sample(locality_onehots_dict.keys(),min(len(locality_onehots_dict.keys()),100))
+        condition = random.sample(locality_onehots_dict.keys(),min(len(locality_onehots_dict.keys()),500))
         condition = [eval(i) for i in condition]
         condition=torch.Tensor(np.array(condition)).float().to(device)
         c_min_95 = []
@@ -192,7 +192,7 @@ if __name__ == "__main__":
     t0 = time.time()
     random.seed(114514)
     # read data
-    traces = 10000
+    traces = 100000
     pairdata, freqpairs, n_size, n_interval,pairsize = get_fb_data(traces)
     sizedata = get_data(pairdata, freqpairs, 'size_index', n_size)
     intervaldata = get_data(pairdata, freqpairs, 'interval_index', n_interval)
