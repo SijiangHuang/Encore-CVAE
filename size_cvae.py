@@ -214,7 +214,7 @@ if __name__ == "__main__":
     sys.stdout.flush()
 
     lr = 1e-4
-    kld_weight = 1e-5#1e-4不行
+    kld_weight = 0#1e-5#1e-4不行
     optimizer = torch.optim.Adam([{'params': encoder.parameters()}, {'params': decoder.parameters()}], lr=lr)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
     print('start in:', time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()))
