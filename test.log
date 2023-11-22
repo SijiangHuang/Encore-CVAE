@@ -196,4 +196,4 @@ eval in34.186301708221436 //coverage is 0.3110 on average and is 0.0130 for the 
 epoch=9200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=30058.32
 eval in37.534708976745605 //coverage is 0.2946 on average and is 0.0112 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
 epoch=9300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=30314.75
-eval in36.99501299858093 //coverage is 0.2946 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+eval in36.99501299858093 //coverage is 0.2946 on averag and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
