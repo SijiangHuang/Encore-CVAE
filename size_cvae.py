@@ -113,9 +113,9 @@ def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, 
         condition = random.sample(locality_onehots_dict.keys(),min(len(locality_onehots_dict.keys()),500))
         condition = [eval(i) for i in condition]
         condition=torch.Tensor(np.array(condition)).float().to(device)
-        c_min_95 = []
+        c_min_99 = []
         c_min_aver = []
-        r_min_95 = []
+        r_min_99 = []
         r_min_aver = []
         coverage = []
         for cond in condition:
@@ -131,9 +131,9 @@ def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, 
             #     matrix[i][j] = sum(abs(y[i]-dataset[j][0]))/dataset[j][0].shape[0]
             column_min,column_posi=torch.min(matrix,dim=0)
             row_min,row_posi=torch.min(matrix,dim=1)
-            c_min_95.append(np.percentile(column_min,95))
+            c_min_99.append(np.percentile(column_min,99))
             c_min_aver.append(np.mean(np.array(column_min)))
-            r_min_95.append(np.percentile(row_min,95))
+            r_min_99.append(np.percentile(row_min,99))
             r_min_aver.append(np.mean(np.array(row_min)))
             row_posi=torch.unique(row_posi)
             coverage.append(len(row_posi)/len(locality_onehots_dict[locality_key]))
@@ -144,8 +144,8 @@ def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, 
         # print("coverage for testsize "+str(test_size)+" is :"+str(len(row_posi)/test_size))
         print("eval in"+str(time.time()-t0)+" //coverage is %.4f on average and is %.4f for the worst" %
               (np.mean(coverage), np.percentile(coverage,1)) +
-              " //per sample error is %.4f on average and is %.4f for the worst" %(np.mean(r_min_aver),np.percentile(r_min_95,95)) +
-              " //per source data error is %.4f on average and is %.4f for the worst" %(np.mean(c_min_aver),np.percentile(c_min_95,95)))
+              " //per sample error is %.4f on average and is %.4f for the worst99 and is %.4f for the worst50" %(np.mean(r_min_aver),np.percentile(r_min_99,99),np.percentile(r_min_99,50)) +
+              " //per source data error is %.4f on average and is %.4f for the worst99 and is %.4f for the worst50" %(np.mean(c_min_aver),np.percentile(c_min_99,99),np.percentile(c_min_99,50)))
         # plt.close()
 
 
@@ -188,12 +188,12 @@ def get_locality(pairdata, freqpairs,pairsize):
 
 def get_kld_weight(epoch=0):
     kld_max=1e-4
-    kld_min=0.0
+    kld_min=1e-6
+    if epoch and epoch%2000==0:
+        return kld_max
     epoch%=2000
-    if epoch<100:
-        return kld_min
-    elif epoch<1100:
-        return (kld_max-kld_min)*((epoch-100)/1000.0)+kld_min
+    if epoch<1000:
+        return (kld_max-kld_min)*((epoch)/1000.0)+kld_min
     else:
         return kld_max
 
