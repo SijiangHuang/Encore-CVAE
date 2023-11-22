@@ -1,1276 +1,199 @@
-nohup: ignoring input
-read data in 4m 22s
+read data in 5m 51s
 maxsrccount106maxdstcount129
-get locality in 4m 35s
-start in: 2023/11/18 17:24:39
-epoch=100, avg_loss=3.40e-03, kld=9.43, recon=2.19e-03(max=1.32e-02), time=229.77
-coverage for testsize 1000 is :0.605
-eval in43.8959105014801
-save model
-epoch=200, avg_loss=2.46e-03, kld=14.80, recon=1.73e-03(max=1.17e-02), time=507.32
-coverage for testsize 1000 is :0.833
-eval in43.398364782333374
-save model
-epoch=300, avg_loss=2.18e-03, kld=15.23, recon=1.66e-03(max=9.65e-03), time=785.08
-coverage for testsize 1000 is :0.842
-eval in44.10499858856201
-save model
-epoch=400, avg_loss=2.06e-03, kld=18.92, recon=1.49e-03(max=4.15e-03), time=1064.68
-coverage for testsize 1000 is :0.885
-eval in42.82759714126587
-save model
-epoch=500, avg_loss=1.87e-03, kld=19.84, recon=1.39e-03(max=3.16e-03), time=1336.32
-coverage for testsize 1000 is :0.909
-eval in43.31707811355591
-save model
-epoch=600, avg_loss=1.80e-03, kld=20.40, recon=1.35e-03(max=3.53e-03), time=1611.00
-coverage for testsize 1000 is :0.917
-eval in43.67479181289673
-save model
-epoch=700, avg_loss=1.75e-03, kld=20.67, recon=1.31e-03(max=3.17e-03), time=1884.50
-coverage for testsize 1000 is :0.937
-eval in43.671494007110596
-save model
-epoch=800, avg_loss=1.71e-03, kld=21.55, recon=1.27e-03(max=3.53e-03), time=2151.29
-coverage for testsize 1000 is :0.933
-eval in42.95010709762573
-save model
-epoch=900, avg_loss=1.67e-03, kld=22.49, recon=1.22e-03(max=7.20e-03), time=2428.03
-coverage for testsize 1000 is :0.931
-eval in47.95526385307312
-save model
-epoch=1000, avg_loss=1.62e-03, kld=22.89, recon=1.19e-03(max=3.56e-03), time=2703.83
-coverage for testsize 10000 is :0.703
-eval in425.2292513847351
-save model
-epoch=1100, avg_loss=1.60e-03, kld=22.95, recon=1.18e-03(max=4.89e-03), time=3367.18
-coverage for testsize 1000 is :0.953
-eval in42.71243333816528
-save model
-epoch=1200, avg_loss=1.57e-03, kld=23.13, recon=1.16e-03(max=3.51e-03), time=3643.63
-coverage for testsize 1000 is :0.952
-eval in43.90526247024536
-save model
-epoch=1300, avg_loss=1.56e-03, kld=23.36, recon=1.13e-03(max=3.14e-03), time=3917.24
-coverage for testsize 1000 is :0.962
-eval in42.96310234069824
-save model
-epoch=1400, avg_loss=1.54e-03, kld=23.37, recon=1.13e-03(max=5.21e-03), time=4189.74
-coverage for testsize 1000 is :0.952
-eval in43.48684573173523
-save model
-epoch=1500, avg_loss=1.53e-03, kld=23.41, recon=1.11e-03(max=1.24e-02), time=4466.48
-coverage for testsize 1000 is :0.962
-eval in42.77929759025574
-save model
-epoch=1600, avg_loss=1.51e-03, kld=23.52, recon=1.10e-03(max=8.89e-03), time=4738.71
-coverage for testsize 1000 is :0.966
-eval in42.69987392425537
-save model
-epoch=1700, avg_loss=1.50e-03, kld=23.51, recon=1.10e-03(max=5.05e-03), time=5008.79
-coverage for testsize 1000 is :0.96
-eval in43.2604341506958
-save model
-epoch=1800, avg_loss=1.49e-03, kld=23.62, recon=1.08e-03(max=4.14e-03), time=5283.13
-coverage for testsize 1000 is :0.966
-eval in43.99113869667053
-save model
-epoch=1900, avg_loss=1.48e-03, kld=23.75, recon=1.07e-03(max=2.37e-03), time=5555.48
-coverage for testsize 1000 is :0.955
-eval in43.67835187911987
-save model
-epoch=2000, avg_loss=1.47e-03, kld=23.74, recon=1.07e-03(max=4.66e-03), time=5827.05
-coverage for testsize 10000 is :0.7578
-eval in429.1805167198181
-save model
-epoch=2100, avg_loss=1.46e-03, kld=23.80, recon=1.06e-03(max=7.83e-03), time=6482.83
-coverage for testsize 1000 is :0.968
-eval in42.76686072349548
-save model
-epoch=2200, avg_loss=1.45e-03, kld=23.82, recon=1.05e-03(max=5.49e-03), time=6748.82
-coverage for testsize 1000 is :0.957
-eval in42.568575382232666
-save model
-epoch=2300, avg_loss=1.45e-03, kld=23.89, recon=1.04e-03(max=3.15e-03), time=7019.72
-coverage for testsize 1000 is :0.978
-eval in46.597827434539795
-save model
-epoch=2400, avg_loss=1.44e-03, kld=23.98, recon=1.04e-03(max=2.44e-03), time=7289.70
-coverage for testsize 1000 is :0.969
-eval in43.74655270576477
-save model
-epoch=2500, avg_loss=1.43e-03, kld=24.00, recon=1.03e-03(max=5.51e-03), time=7560.10
-coverage for testsize 1000 is :0.97
-eval in43.906383752822876
-save model
-epoch=2600, avg_loss=1.43e-03, kld=23.97, recon=1.03e-03(max=3.19e-03), time=7836.75
-coverage for testsize 1000 is :0.963
-eval in43.337496280670166
-save model
-epoch=2700, avg_loss=1.42e-03, kld=23.93, recon=1.03e-03(max=2.71e-03), time=8104.26
-coverage for testsize 1000 is :0.971
-eval in43.81103444099426
-save model
-epoch=2800, avg_loss=1.42e-03, kld=24.12, recon=1.02e-03(max=3.81e-03), time=8372.79
-coverage for testsize 1000 is :0.97
-eval in43.43587803840637
-save model
-epoch=2900, avg_loss=1.41e-03, kld=24.17, recon=1.01e-03(max=5.25e-03), time=8647.51
-coverage for testsize 1000 is :0.969
-eval in43.064568519592285
-save model
-epoch=3000, avg_loss=1.41e-03, kld=24.21, recon=1.01e-03(max=5.80e-03), time=8922.54
-coverage for testsize 10000 is :0.7879
-eval in425.44119572639465
-save model
-epoch=3100, avg_loss=1.40e-03, kld=24.09, recon=1.01e-03(max=1.23e-02), time=9578.08
-coverage for testsize 1000 is :0.967
-eval in42.99260401725769
-save model
-epoch=3200, avg_loss=1.40e-03, kld=24.23, recon=9.98e-04(max=4.66e-03), time=9849.90
-coverage for testsize 1000 is :0.983
-eval in43.65397906303406
-save model
-epoch=3300, avg_loss=1.39e-03, kld=24.30, recon=9.93e-04(max=2.94e-03), time=10130.46
-coverage for testsize 1000 is :0.968
-eval in43.490646839141846
-save model
-epoch=3400, avg_loss=1.39e-03, kld=24.28, recon=9.94e-04(max=4.55e-03), time=10407.34
-coverage for testsize 1000 is :0.972
-eval in43.503501653671265
-save model
-epoch=3500, avg_loss=1.39e-03, kld=24.32, recon=9.88e-04(max=3.05e-03), time=10677.41
-coverage for testsize 1000 is :0.968
-eval in42.54731273651123
-save model
-epoch=3600, avg_loss=1.38e-03, kld=24.31, recon=9.84e-04(max=2.35e-03), time=10950.96
-coverage for testsize 1000 is :0.973
-eval in42.50497913360596
-save model
-epoch=3700, avg_loss=1.38e-03, kld=24.39, recon=9.80e-04(max=3.62e-03), time=11222.62
-coverage for testsize 1000 is :0.972
-eval in45.59722065925598
-save model
-epoch=3800, avg_loss=1.38e-03, kld=24.26, recon=9.91e-04(max=4.17e-03), time=11491.09
-coverage for testsize 1000 is :0.972
-eval in42.41496753692627
-save model
-epoch=3900, avg_loss=1.37e-03, kld=24.41, recon=9.77e-04(max=3.67e-03), time=11763.40
-coverage for testsize 1000 is :0.973
-eval in43.070406913757324
-save model
-epoch=4000, avg_loss=1.37e-03, kld=24.42, recon=9.74e-04(max=2.39e-03), time=12036.40
-coverage for testsize 10000 is :0.8007
-eval in426.0937280654907
-save model
-epoch=4100, avg_loss=1.36e-03, kld=24.37, recon=9.76e-04(max=4.65e-03), time=12681.67
-coverage for testsize 1000 is :0.974
-eval in42.801528215408325
-save model
-epoch=4200, avg_loss=1.36e-03, kld=24.32, recon=9.77e-04(max=6.54e-03), time=12950.25
-coverage for testsize 1000 is :0.971
-eval in43.32691025733948
-save model
-epoch=4300, avg_loss=1.36e-03, kld=24.44, recon=9.72e-04(max=3.53e-03), time=13212.92
-coverage for testsize 1000 is :0.974
-eval in43.146846771240234
-save model
-epoch=4400, avg_loss=1.36e-03, kld=24.56, recon=9.60e-04(max=3.83e-03), time=13484.38
-coverage for testsize 1000 is :0.973
-eval in43.11037755012512
-save model
-epoch=4500, avg_loss=1.36e-03, kld=24.06, recon=1.01e-03(max=7.39e-03), time=13756.00
-coverage for testsize 1000 is :0.983
-eval in43.201035022735596
-save model
-epoch=4600, avg_loss=1.35e-03, kld=24.59, recon=9.56e-04(max=2.14e-03), time=14026.97
-coverage for testsize 1000 is :0.969
-eval in42.843361616134644
-save model
-epoch=4700, avg_loss=1.35e-03, kld=24.57, recon=9.56e-04(max=4.39e-03), time=14297.91
-coverage for testsize 1000 is :0.978
-eval in42.97909951210022
-save model
-epoch=4800, avg_loss=1.35e-03, kld=24.53, recon=9.53e-04(max=2.76e-03), time=14567.37
-coverage for testsize 1000 is :0.973
-eval in42.98559308052063
-save model
-epoch=4900, avg_loss=1.34e-03, kld=24.63, recon=9.49e-04(max=4.64e-03), time=14836.29
-coverage for testsize 1000 is :0.977
-eval in42.71679615974426
-save model
-epoch=5000, avg_loss=1.34e-03, kld=24.60, recon=9.50e-04(max=3.58e-03), time=15104.14
-coverage for testsize 10000 is :0.8126
-eval in429.3420648574829
-save model
-epoch=5100, avg_loss=1.34e-03, kld=24.65, recon=9.46e-04(max=3.28e-03), time=15762.35
-coverage for testsize 1000 is :0.969
-eval in45.42154860496521
-save model
-epoch=5200, avg_loss=1.34e-03, kld=24.70, recon=9.41e-04(max=5.51e-03), time=16038.46
-coverage for testsize 1000 is :0.972
-eval in43.775355100631714
-save model
-epoch=5300, avg_loss=1.34e-03, kld=24.74, recon=9.39e-04(max=2.95e-03), time=16312.96
-coverage for testsize 1000 is :0.98
-eval in42.969510555267334
-save model
-epoch=5400, avg_loss=1.33e-03, kld=24.62, recon=9.45e-04(max=6.81e-03), time=16583.75
-coverage for testsize 1000 is :0.968
-eval in43.762629985809326
-save model
-epoch=5500, avg_loss=1.33e-03, kld=24.65, recon=9.41e-04(max=6.00e-03), time=16852.14
-coverage for testsize 1000 is :0.969
-eval in42.61458992958069
-save model
-epoch=5600, avg_loss=1.33e-03, kld=24.75, recon=9.34e-04(max=3.75e-03), time=17121.28
-coverage for testsize 1000 is :0.971
-eval in43.549083948135376
-save model
-epoch=5700, avg_loss=1.33e-03, kld=24.77, recon=9.30e-04(max=2.54e-03), time=17391.16
-coverage for testsize 1000 is :0.974
-eval in43.42690110206604
-epoch=5800, avg_loss=1.33e-03, kld=24.80, recon=9.29e-04(max=2.13e-03), time=17658.03
-coverage for testsize 1000 is :0.974
-eval in43.28581428527832
-save model
-epoch=5900, avg_loss=1.33e-03, kld=24.73, recon=9.33e-04(max=3.73e-03), time=17933.07
-coverage for testsize 1000 is :0.974
-eval in43.890947580337524
-save model
-epoch=6000, avg_loss=1.32e-03, kld=24.66, recon=9.38e-04(max=4.98e-03), time=18204.23
-coverage for testsize 10000 is :0.8149
-eval in435.35224986076355
-save model
-epoch=6100, avg_loss=1.32e-03, kld=24.63, recon=9.40e-04(max=3.87e-03), time=18869.77
-coverage for testsize 1000 is :0.98
-eval in43.04538440704346
-save model
-epoch=6200, avg_loss=1.32e-03, kld=24.65, recon=9.41e-04(max=3.78e-03), time=19133.13
-coverage for testsize 1000 is :0.98
-eval in43.17930722236633
-save model
-epoch=6300, avg_loss=1.32e-03, kld=24.82, recon=9.31e-04(max=5.34e-03), time=19401.31
-coverage for testsize 1000 is :0.984
-eval in43.07943558692932
-epoch=6400, avg_loss=1.32e-03, kld=24.48, recon=9.65e-04(max=3.63e-03), time=19666.88
-coverage for testsize 1000 is :0.98
-eval in43.75669479370117
-save model
-epoch=6500, avg_loss=1.32e-03, kld=24.82, recon=9.24e-04(max=4.74e-03), time=19928.74
-coverage for testsize 1000 is :0.976
-eval in46.08038139343262
-save model
-epoch=6600, avg_loss=1.32e-03, kld=24.83, recon=9.22e-04(max=4.21e-03), time=20175.70
-coverage for testsize 1000 is :0.972
-eval in43.51175594329834
-save model
-epoch=6700, avg_loss=1.31e-03, kld=24.80, recon=9.23e-04(max=4.89e-03), time=20433.44
-coverage for testsize 1000 is :0.977
-eval in43.93601441383362
-save model
-epoch=6800, avg_loss=1.31e-03, kld=24.88, recon=9.23e-04(max=2.90e-03), time=20693.39
-coverage for testsize 1000 is :0.976
-eval in43.65570306777954
-save model
-epoch=6900, avg_loss=1.31e-03, kld=24.91, recon=9.14e-04(max=3.29e-03), time=20961.65
-coverage for testsize 1000 is :0.976
-eval in43.98633146286011
-save model
-epoch=7000, avg_loss=1.31e-03, kld=24.74, recon=9.28e-04(max=3.49e-03), time=21220.35
-coverage for testsize 10000 is :0.8277
-eval in426.07563877105713
-save model
-epoch=7100, avg_loss=1.31e-03, kld=24.91, recon=9.16e-04(max=4.86e-03), time=21870.00
-coverage for testsize 1000 is :0.971
-eval in43.47283959388733
-epoch=7200, avg_loss=1.31e-03, kld=24.91, recon=9.14e-04(max=4.67e-03), time=22139.13
-coverage for testsize 1000 is :0.977
-eval in42.820563316345215
-save model
-epoch=7300, avg_loss=1.31e-03, kld=24.95, recon=9.10e-04(max=2.13e-03), time=22414.65
-coverage for testsize 1000 is :0.985
-eval in42.589905977249146
-epoch=7400, avg_loss=1.30e-03, kld=24.99, recon=9.07e-04(max=2.24e-03), time=22691.65
-coverage for testsize 1000 is :0.978
-eval in43.01785612106323
-save model
-epoch=7500, avg_loss=1.30e-03, kld=24.94, recon=9.11e-04(max=3.86e-03), time=22957.04
-coverage for testsize 1000 is :0.982
-eval in43.3752281665802
-save model
-epoch=7600, avg_loss=1.30e-03, kld=24.96, recon=9.11e-04(max=3.32e-03), time=23228.93
-coverage for testsize 1000 is :0.983
-eval in42.94233822822571
-epoch=7700, avg_loss=1.30e-03, kld=25.03, recon=9.08e-04(max=4.33e-03), time=23480.88
-coverage for testsize 1000 is :0.977
-eval in42.75914406776428
-save model
-epoch=7800, avg_loss=1.30e-03, kld=24.91, recon=9.11e-04(max=4.35e-03), time=23749.74
-coverage for testsize 1000 is :0.979
-eval in42.58732748031616
-save model
-epoch=7900, avg_loss=1.30e-03, kld=24.92, recon=9.07e-04(max=4.89e-03), time=24020.52
-coverage for testsize 1000 is :0.976
-eval in42.874714851379395
-epoch=8000, avg_loss=1.30e-03, kld=24.91, recon=9.10e-04(max=6.07e-03), time=24294.06
-coverage for testsize 10000 is :0.8333
-eval in434.2992446422577
-save model
-epoch=8100, avg_loss=1.30e-03, kld=24.90, recon=9.18e-04(max=3.89e-03), time=24955.45
-coverage for testsize 1000 is :0.975
-eval in42.78863024711609
-save model
-epoch=8200, avg_loss=1.30e-03, kld=25.10, recon=9.00e-04(max=2.54e-03), time=25206.38
-coverage for testsize 1000 is :0.972
-eval in43.807064056396484
-save model
-epoch=8300, avg_loss=1.29e-03, kld=25.04, recon=9.02e-04(max=3.12e-03), time=25460.73
-coverage for testsize 1000 is :0.976
-eval in43.09481978416443
-save model
-epoch=8400, avg_loss=1.29e-03, kld=25.02, recon=9.04e-04(max=3.16e-03), time=25733.26
-coverage for testsize 1000 is :0.979
-eval in44.0073037147522
-epoch=8500, avg_loss=1.29e-03, kld=25.09, recon=8.98e-04(max=4.02e-03), time=26016.20
-coverage for testsize 1000 is :0.978
-eval in43.59368181228638
-epoch=8600, avg_loss=1.29e-03, kld=25.08, recon=8.99e-04(max=3.93e-03), time=26279.49
-coverage for testsize 1000 is :0.983
-eval in44.394651651382446
-epoch=8700, avg_loss=1.29e-03, kld=25.05, recon=9.00e-04(max=4.27e-03), time=26547.72
-coverage for testsize 1000 is :0.98
-eval in43.090802907943726
-save model
-epoch=8800, avg_loss=1.29e-03, kld=24.99, recon=9.03e-04(max=3.14e-03), time=26824.15
-coverage for testsize 1000 is :0.979
-eval in43.549158334732056
-save model
-epoch=8900, avg_loss=1.29e-03, kld=25.12, recon=8.92e-04(max=2.93e-03), time=27088.95
-coverage for testsize 1000 is :0.98
-eval in43.10543608665466
-save model
-epoch=9000, avg_loss=1.29e-03, kld=24.93, recon=9.07e-04(max=4.32e-03), time=27340.97
-coverage for testsize 10000 is :0.8294
-eval in438.565238237381
-save model
-epoch=9100, avg_loss=1.29e-03, kld=25.13, recon=8.94e-04(max=2.14e-03), time=28000.55
-coverage for testsize 1000 is :0.982
-eval in43.36104655265808
-epoch=9200, avg_loss=1.29e-03, kld=25.09, recon=8.97e-04(max=2.84e-03), time=28266.02
-coverage for testsize 1000 is :0.974
-eval in44.020601749420166
-save model
-epoch=9300, avg_loss=1.29e-03, kld=25.01, recon=8.98e-04(max=3.86e-03), time=28522.89
-coverage for testsize 1000 is :0.98
-eval in44.0122971534729
-save model
-epoch=9400, avg_loss=1.28e-03, kld=25.06, recon=9.01e-04(max=5.32e-03), time=28783.61
-coverage for testsize 1000 is :0.988
-eval in45.43655276298523
-save model
-epoch=9500, avg_loss=1.29e-03, kld=25.05, recon=8.97e-04(max=4.73e-03), time=29041.95
-coverage for testsize 1000 is :0.979
-eval in43.79562950134277
-epoch=9600, avg_loss=1.28e-03, kld=25.15, recon=8.90e-04(max=3.17e-03), time=29314.77
-coverage for testsize 1000 is :0.97
-eval in43.41863179206848
-save model
-epoch=9700, avg_loss=1.28e-03, kld=25.04, recon=8.99e-04(max=3.83e-03), time=29584.44
-coverage for testsize 1000 is :0.977
-eval in43.63396739959717
-epoch=9800, avg_loss=1.28e-03, kld=25.02, recon=8.95e-04(max=2.85e-03), time=29857.37
-coverage for testsize 1000 is :0.985
-eval in43.563191413879395
-save model
-epoch=9900, avg_loss=1.28e-03, kld=25.08, recon=8.94e-04(max=2.69e-03), time=30133.50
-coverage for testsize 1000 is :0.978
-eval in43.648298025131226
-epoch=10000, avg_loss=1.28e-03, kld=25.14, recon=8.89e-04(max=7.34e-03), time=30400.11
-coverage for testsize 10000 is :0.8346
-eval in424.8271155357361
-save model
-epoch=10100, avg_loss=1.28e-03, kld=25.17, recon=8.86e-04(max=3.95e-03), time=31052.99
-coverage for testsize 1000 is :0.983
-eval in43.65066337585449
-epoch=10200, avg_loss=1.28e-03, kld=25.15, recon=8.85e-04(max=2.25e-03), time=31316.42
-coverage for testsize 1000 is :0.968
-eval in42.75932860374451
-save model
-epoch=10300, avg_loss=1.28e-03, kld=25.17, recon=8.85e-04(max=4.30e-03), time=31584.66
-coverage for testsize 1000 is :0.976
-eval in43.393545150756836
-epoch=10400, avg_loss=1.28e-03, kld=25.13, recon=8.93e-04(max=4.30e-03), time=31855.12
-coverage for testsize 1000 is :0.972
-eval in43.7376503944397
-save model
-epoch=10500, avg_loss=1.28e-03, kld=25.14, recon=8.85e-04(max=3.84e-03), time=32125.78
-coverage for testsize 1000 is :0.975
-eval in44.51691007614136
-save model
-epoch=10600, avg_loss=1.28e-03, kld=25.17, recon=8.84e-04(max=2.85e-03), time=32390.79
-coverage for testsize 1000 is :0.974
-eval in44.02871131896973
-epoch=10700, avg_loss=1.28e-03, kld=25.21, recon=8.84e-04(max=4.50e-03), time=32658.57
-coverage for testsize 1000 is :0.98
-eval in43.91901445388794
-save model
-epoch=10800, avg_loss=1.27e-03, kld=25.06, recon=8.94e-04(max=4.61e-03), time=32930.82
-coverage for testsize 1000 is :0.98
-eval in45.96200203895569
-save model
-epoch=10900, avg_loss=1.27e-03, kld=25.17, recon=8.86e-04(max=4.13e-03), time=33185.76
-coverage for testsize 1000 is :0.977
-eval in43.607484340667725
-save model
-epoch=11000, avg_loss=1.27e-03, kld=25.13, recon=8.94e-04(max=5.17e-03), time=33446.16
-coverage for testsize 10000 is :0.8295
-eval in417.57005286216736
-save model
-epoch=11100, avg_loss=1.27e-03, kld=25.14, recon=8.88e-04(max=4.80e-03), time=34077.07
-coverage for testsize 1000 is :0.982
-eval in43.83255314826965
-epoch=11200, avg_loss=1.27e-03, kld=25.16, recon=8.84e-04(max=3.65e-03), time=34336.76
-coverage for testsize 1000 is :0.98
-eval in43.76854133605957
-save model
-epoch=11300, avg_loss=1.27e-03, kld=25.24, recon=8.80e-04(max=3.11e-03), time=34611.56
-coverage for testsize 1000 is :0.975
-eval in43.20209884643555
-save model
-epoch=11400, avg_loss=1.27e-03, kld=25.21, recon=8.85e-04(max=5.25e-03), time=34886.37
-coverage for testsize 1000 is :0.977
-eval in44.638126611709595
-epoch=11500, avg_loss=1.27e-03, kld=25.21, recon=8.82e-04(max=3.47e-03), time=35163.95
-coverage for testsize 1000 is :0.973
-eval in43.86914396286011
-save model
-epoch=11600, avg_loss=1.27e-03, kld=25.15, recon=8.83e-04(max=2.82e-03), time=35441.30
-coverage for testsize 1000 is :0.979
-eval in43.81402015686035
-epoch=11700, avg_loss=1.27e-03, kld=25.23, recon=8.78e-04(max=2.34e-03), time=35714.18
-coverage for testsize 1000 is :0.982
-eval in44.06352686882019
-epoch=11800, avg_loss=1.27e-03, kld=25.17, recon=8.82e-04(max=5.04e-03), time=35985.41
-coverage for testsize 1000 is :0.977
-eval in43.092915058135986
-save model
-epoch=11900, avg_loss=1.27e-03, kld=25.14, recon=8.85e-04(max=5.75e-03), time=36260.15
-coverage for testsize 1000 is :0.983
-eval in42.850192070007324
-save model
-epoch=12000, avg_loss=1.27e-03, kld=25.21, recon=8.85e-04(max=4.41e-03), time=36528.10
-coverage for testsize 10000 is :0.8399
-eval in422.38005685806274
-epoch=12100, avg_loss=1.27e-03, kld=25.22, recon=8.76e-04(max=4.21e-03), time=37173.95
-coverage for testsize 1000 is :0.983
-eval in44.08145356178284
-save model
-epoch=12200, avg_loss=1.27e-03, kld=25.32, recon=8.74e-04(max=5.04e-03), time=37444.80
-coverage for testsize 1000 is :0.967
-eval in45.40563082695007
-save model
-epoch=12300, avg_loss=1.27e-03, kld=25.26, recon=8.78e-04(max=5.16e-03), time=37718.85
-coverage for testsize 1000 is :0.976
-eval in43.76290416717529
-epoch=12400, avg_loss=1.27e-03, kld=25.22, recon=8.79e-04(max=3.80e-03), time=37992.47
-coverage for testsize 1000 is :0.98
-eval in43.86198925971985
-epoch=12500, avg_loss=1.26e-03, kld=25.27, recon=8.80e-04(max=2.49e-03), time=38272.78
-coverage for testsize 1000 is :0.985
-eval in43.537461280822754
-save model
-epoch=12600, avg_loss=1.27e-03, kld=25.28, recon=8.75e-04(max=2.79e-03), time=38545.73
-coverage for testsize 1000 is :0.981
-eval in43.20003342628479
-epoch=12700, avg_loss=1.26e-03, kld=25.31, recon=8.71e-04(max=6.28e-03), time=38820.94
-coverage for testsize 1000 is :0.973
-eval in43.32396721839905
-epoch=12800, avg_loss=1.26e-03, kld=25.25, recon=8.74e-04(max=6.90e-03), time=39089.80
-coverage for testsize 1000 is :0.989
-eval in43.968541860580444
-save model
-epoch=12900, avg_loss=1.26e-03, kld=25.14, recon=8.81e-04(max=3.28e-03), time=39365.82
-coverage for testsize 1000 is :0.975
-eval in43.14180088043213
-save model
-epoch=13000, avg_loss=1.26e-03, kld=25.12, recon=8.87e-04(max=3.76e-03), time=39634.55
-coverage for testsize 10000 is :0.8405
-eval in428.6918098926544
-save model
-epoch=13100, avg_loss=1.26e-03, kld=25.19, recon=8.79e-04(max=3.22e-03), time=40294.81
-coverage for testsize 1000 is :0.981
-eval in44.06429576873779
-epoch=13200, avg_loss=1.26e-03, kld=25.31, recon=8.69e-04(max=5.27e-03), time=40564.22
-coverage for testsize 1000 is :0.977
-eval in42.96813750267029
-epoch=13300, avg_loss=1.26e-03, kld=25.33, recon=8.67e-04(max=3.28e-03), time=40834.66
-coverage for testsize 1000 is :0.975
-eval in43.12948203086853
-save model
-epoch=13400, avg_loss=1.26e-03, kld=25.24, recon=8.71e-04(max=2.41e-03), time=41110.83
-coverage for testsize 1000 is :0.978
-eval in43.60433530807495
-epoch=13500, avg_loss=1.26e-03, kld=25.36, recon=8.66e-04(max=3.98e-03), time=41386.34
-coverage for testsize 1000 is :0.976
-eval in44.131505489349365
-epoch=13600, avg_loss=1.26e-03, kld=25.18, recon=8.78e-04(max=3.27e-03), time=41664.63
-coverage for testsize 1000 is :0.977
-eval in47.111568212509155
-epoch=13700, avg_loss=1.26e-03, kld=25.20, recon=8.74e-04(max=5.22e-03), time=41942.35
-coverage for testsize 1000 is :0.98
-eval in43.35213303565979
-save model
-epoch=13800, avg_loss=1.26e-03, kld=25.32, recon=8.68e-04(max=2.83e-03), time=42218.99
-coverage for testsize 1000 is :0.973
-eval in42.86487627029419
-save model
-epoch=13900, avg_loss=1.26e-03, kld=25.20, recon=8.79e-04(max=3.42e-03), time=42488.27
-coverage for testsize 1000 is :0.974
-eval in43.61862277984619
-epoch=14000, avg_loss=1.26e-03, kld=25.37, recon=8.63e-04(max=4.20e-03), time=42763.82
-coverage for testsize 10000 is :0.8404
-eval in421.55706000328064
-epoch=14100, avg_loss=1.26e-03, kld=25.03, recon=9.02e-04(max=3.53e-03), time=43411.85
-coverage for testsize 1000 is :0.973
-eval in42.71955466270447
-save model
-epoch=14200, avg_loss=1.26e-03, kld=25.19, recon=8.76e-04(max=5.36e-03), time=43683.86
-coverage for testsize 1000 is :0.982
-eval in43.42656993865967
-epoch=14300, avg_loss=1.26e-03, kld=25.41, recon=8.63e-04(max=6.76e-03), time=43957.50
-coverage for testsize 1000 is :0.982
-eval in42.999064683914185
-save model
-epoch=14400, avg_loss=1.26e-03, kld=25.35, recon=8.69e-04(max=3.33e-03), time=44233.45
-coverage for testsize 1000 is :0.968
-eval in42.81519794464111
-epoch=14500, avg_loss=1.26e-03, kld=25.35, recon=8.65e-04(max=2.97e-03), time=44507.05
-coverage for testsize 1000 is :0.986
-eval in43.461175203323364
-epoch=14600, avg_loss=1.26e-03, kld=25.30, recon=8.70e-04(max=3.79e-03), time=44782.09
-coverage for testsize 1000 is :0.975
-eval in42.67267894744873
-epoch=14700, avg_loss=1.26e-03, kld=25.43, recon=8.62e-04(max=6.40e-03), time=45058.96
-coverage for testsize 1000 is :0.979
-eval in43.582972288131714
-epoch=14800, avg_loss=1.26e-03, kld=25.34, recon=8.65e-04(max=5.03e-03), time=45334.52
-coverage for testsize 1000 is :0.984
-eval in42.97631883621216
-epoch=14900, avg_loss=1.25e-03, kld=25.36, recon=8.65e-04(max=5.86e-03), time=45608.01
-coverage for testsize 1000 is :0.983
-eval in42.556342124938965
-save model
-epoch=15000, avg_loss=1.26e-03, kld=25.23, recon=8.72e-04(max=3.03e-03), time=45885.14
-coverage for testsize 10000 is :0.8366
-eval in430.9085395336151
-epoch=15100, avg_loss=1.26e-03, kld=25.35, recon=8.64e-04(max=5.71e-03), time=46544.26
-coverage for testsize 1000 is :0.986
-eval in43.83534026145935
-epoch=15200, avg_loss=1.25e-03, kld=25.35, recon=8.63e-04(max=3.52e-03), time=46815.99
-coverage for testsize 1000 is :0.979
-eval in43.19451880455017
-save model
-epoch=15300, avg_loss=1.25e-03, kld=25.43, recon=8.58e-04(max=2.92e-03), time=47092.15
-coverage for testsize 1000 is :0.975
-eval in43.26962471008301
-epoch=15400, avg_loss=1.25e-03, kld=25.35, recon=8.63e-04(max=5.50e-03), time=47362.52
-coverage for testsize 1000 is :0.98
-eval in42.77033543586731
-epoch=15500, avg_loss=1.25e-03, kld=25.40, recon=8.59e-04(max=3.60e-03), time=47635.87
-coverage for testsize 1000 is :0.991
-eval in43.43774676322937
-epoch=15600, avg_loss=1.26e-03, kld=25.38, recon=8.64e-04(max=3.26e-03), time=47912.48
-coverage for testsize 1000 is :0.977
-eval in43.57538604736328
-epoch=15700, avg_loss=1.25e-03, kld=25.39, recon=8.64e-04(max=4.91e-03), time=48179.83
-coverage for testsize 1000 is :0.973
-eval in43.465049505233765
-epoch=15800, avg_loss=1.25e-03, kld=25.25, recon=8.72e-04(max=3.81e-03), time=48453.32
-coverage for testsize 1000 is :0.984
-eval in43.69111943244934
-epoch=15900, avg_loss=1.25e-03, kld=25.39, recon=8.63e-04(max=4.89e-03), time=48723.72
-coverage for testsize 1000 is :0.991
-eval in43.79596757888794
-save model
-epoch=16000, avg_loss=1.25e-03, kld=25.38, recon=8.63e-04(max=3.36e-03), time=48997.48
-coverage for testsize 10000 is :0.8419
-eval in435.1734149456024
-epoch=16100, avg_loss=1.25e-03, kld=25.26, recon=8.86e-04(max=4.70e-03), time=49661.40
-coverage for testsize 1000 is :0.983
-eval in44.458022117614746
-save model
-epoch=16200, avg_loss=1.25e-03, kld=25.31, recon=8.64e-04(max=2.92e-03), time=49930.06
-coverage for testsize 1000 is :0.968
-eval in43.28390836715698
-epoch=16300, avg_loss=1.25e-03, kld=25.39, recon=8.62e-04(max=3.43e-03), time=50199.94
-coverage for testsize 1000 is :0.977
-eval in42.800357818603516
-epoch=16400, avg_loss=1.25e-03, kld=25.26, recon=8.89e-04(max=2.73e-03), time=50470.09
-coverage for testsize 1000 is :0.979
-eval in46.62764883041382
-epoch=16500, avg_loss=1.25e-03, kld=25.37, recon=8.63e-04(max=2.70e-03), time=50746.25
-coverage for testsize 1000 is :0.971
-eval in43.18921709060669
-epoch=16600, avg_loss=1.25e-03, kld=25.34, recon=8.64e-04(max=5.86e-03), time=51022.99
-coverage for testsize 1000 is :0.98
-eval in43.887505292892456
-save model
-epoch=16700, avg_loss=1.25e-03, kld=25.38, recon=8.67e-04(max=3.28e-03), time=51295.75
-coverage for testsize 1000 is :0.981
-eval in43.11375713348389
-epoch=16800, avg_loss=1.25e-03, kld=25.35, recon=8.60e-04(max=3.91e-03), time=51573.13
-coverage for testsize 1000 is :0.979
-eval in44.23826336860657
-save model
-epoch=16900, avg_loss=1.25e-03, kld=25.29, recon=8.67e-04(max=4.17e-03), time=51848.73
-coverage for testsize 1000 is :0.985
-eval in43.7453875541687
-epoch=17000, avg_loss=1.25e-03, kld=25.29, recon=8.67e-04(max=3.93e-03), time=52125.27
-coverage for testsize 10000 is :0.8477
-eval in427.31110548973083
-epoch=17100, avg_loss=1.25e-03, kld=25.35, recon=8.65e-04(max=3.23e-03), time=52776.76
-coverage for testsize 1000 is :0.978
-eval in43.76069140434265
-epoch=17200, avg_loss=1.25e-03, kld=25.42, recon=8.63e-04(max=2.24e-03), time=53048.10
-coverage for testsize 1000 is :0.981
-eval in44.45602345466614
-epoch=17300, avg_loss=1.25e-03, kld=25.45, recon=8.53e-04(max=2.88e-03), time=53316.20
-coverage for testsize 1000 is :0.981
-eval in43.70926094055176
-save model
-epoch=17400, avg_loss=1.24e-03, kld=25.41, recon=8.61e-04(max=4.48e-03), time=53580.21
-coverage for testsize 1000 is :0.976
-eval in42.47878289222717
-save model
-epoch=17500, avg_loss=1.25e-03, kld=25.38, recon=8.58e-04(max=3.31e-03), time=53844.02
-coverage for testsize 1000 is :0.972
-eval in43.01346278190613
-epoch=17600, avg_loss=1.25e-03, kld=25.36, recon=8.64e-04(max=4.09e-03), time=54115.15
-coverage for testsize 1000 is :0.98
-eval in43.45684552192688
-epoch=17700, avg_loss=1.24e-03, kld=25.52, recon=8.52e-04(max=3.61e-03), time=54376.68
-coverage for testsize 1000 is :0.982
-eval in43.445308208465576
-save model
-epoch=17800, avg_loss=1.25e-03, kld=25.34, recon=8.62e-04(max=4.58e-03), time=54617.52
-coverage for testsize 1000 is :0.98
-eval in46.024882316589355
-epoch=17900, avg_loss=1.25e-03, kld=25.40, recon=8.62e-04(max=4.09e-03), time=54872.23
-coverage for testsize 1000 is :0.976
-eval in42.95185422897339
-epoch=18000, avg_loss=1.25e-03, kld=25.28, recon=8.67e-04(max=5.19e-03), time=55129.65
-coverage for testsize 10000 is :0.8428
-eval in423.2919476032257
-epoch=18100, avg_loss=1.25e-03, kld=25.44, recon=8.52e-04(max=3.39e-03), time=55761.84
-coverage for testsize 1000 is :0.981
-eval in42.598313093185425
-epoch=18200, avg_loss=1.24e-03, kld=25.61, recon=8.48e-04(max=2.13e-03), time=56027.14
-coverage for testsize 1000 is :0.985
-eval in42.58980131149292
-epoch=18300, avg_loss=1.25e-03, kld=25.37, recon=8.63e-04(max=3.92e-03), time=56290.92
-coverage for testsize 1000 is :0.979
-eval in43.98207235336304
-epoch=18400, avg_loss=1.24e-03, kld=25.47, recon=8.54e-04(max=3.04e-03), time=56539.59
-coverage for testsize 1000 is :0.974
-eval in43.8626708984375
-save model
-epoch=18500, avg_loss=1.24e-03, kld=25.40, recon=8.59e-04(max=5.37e-03), time=56784.74
-coverage for testsize 1000 is :0.977
-eval in42.73785161972046
-save model
-epoch=18600, avg_loss=1.24e-03, kld=25.39, recon=8.60e-04(max=3.38e-03), time=57035.38
-coverage for testsize 1000 is :0.976
-eval in43.55656623840332
-save model
-epoch=18700, avg_loss=1.24e-03, kld=25.47, recon=8.52e-04(max=4.07e-03), time=57302.04
-coverage for testsize 1000 is :0.973
-eval in43.25673270225525
-epoch=18800, avg_loss=1.24e-03, kld=25.44, recon=8.53e-04(max=2.70e-03), time=57545.18
-coverage for testsize 1000 is :0.975
-eval in43.72499680519104
-epoch=18900, avg_loss=1.24e-03, kld=25.46, recon=8.58e-04(max=7.26e-03), time=57817.20
-coverage for testsize 1000 is :0.981
-eval in44.02631616592407
-epoch=19000, avg_loss=1.24e-03, kld=25.43, recon=8.53e-04(max=2.85e-03), time=58064.68
-coverage for testsize 10000 is :0.841
-eval in427.15573620796204
-epoch=19100, avg_loss=1.24e-03, kld=25.23, recon=8.96e-04(max=6.08e-03), time=58715.72
-coverage for testsize 1000 is :0.982
-eval in43.21312475204468
-epoch=19200, avg_loss=1.24e-03, kld=25.42, recon=8.58e-04(max=4.98e-03), time=59004.40
-coverage for testsize 1000 is :0.97
-eval in48.56551241874695
-save model
-epoch=19300, avg_loss=1.24e-03, kld=25.54, recon=8.47e-04(max=4.35e-03), time=59298.14
-coverage for testsize 1000 is :0.976
-eval in43.410425424575806
-epoch=19400, avg_loss=1.24e-03, kld=25.53, recon=8.47e-04(max=3.00e-03), time=59569.22
-coverage for testsize 1000 is :0.984
-eval in43.20530676841736
-epoch=19500, avg_loss=1.24e-03, kld=25.45, recon=8.52e-04(max=3.43e-03), time=59841.24
-coverage for testsize 1000 is :0.979
-eval in42.82503151893616
-epoch=19600, avg_loss=1.24e-03, kld=25.42, recon=8.56e-04(max=5.95e-03), time=60159.68
-coverage for testsize 1000 is :0.983
-eval in43.02920579910278
-save model
-epoch=19700, avg_loss=1.24e-03, kld=25.55, recon=8.46e-04(max=2.13e-03), time=60438.91
-coverage for testsize 1000 is :0.981
-eval in42.85203194618225
-save model
-epoch=19800, avg_loss=1.24e-03, kld=25.42, recon=8.54e-04(max=5.10e-03), time=60714.17
-coverage for testsize 1000 is :0.979
-eval in43.142356872558594
-save model
-epoch=19900, avg_loss=1.24e-03, kld=25.36, recon=8.62e-04(max=5.83e-03), time=61000.71
-coverage for testsize 1000 is :0.98
-eval in43.31023931503296
-save model
-epoch=20000, avg_loss=1.24e-03, kld=25.28, recon=8.79e-04(max=4.49e-03), time=61275.50
-coverage for testsize 10000 is :0.8438
-eval in429.610196352005
-epoch=20100, avg_loss=1.24e-03, kld=25.46, recon=8.54e-04(max=3.50e-03), time=61935.03
-coverage for testsize 1000 is :0.981
-eval in43.96226954460144
-epoch=20200, avg_loss=1.24e-03, kld=25.54, recon=8.46e-04(max=2.13e-03), time=62214.12
-coverage for testsize 1000 is :0.982
-eval in43.7322998046875
-save model
-epoch=20300, avg_loss=1.24e-03, kld=25.44, recon=8.51e-04(max=4.50e-03), time=62482.28
-coverage for testsize 1000 is :0.978
-eval in43.2037513256073
-epoch=20400, avg_loss=1.24e-03, kld=25.37, recon=8.62e-04(max=4.18e-03), time=62750.55
-coverage for testsize 1000 is :0.983
-eval in43.6457793712616
-epoch=20500, avg_loss=1.24e-03, kld=25.50, recon=8.49e-04(max=3.78e-03), time=63033.15
-coverage for testsize 1000 is :0.988
-eval in43.186540842056274
-epoch=20600, avg_loss=1.24e-03, kld=25.45, recon=8.53e-04(max=4.29e-03), time=63308.23
-coverage for testsize 1000 is :0.979
-eval in43.898027181625366
-save model
-epoch=20700, avg_loss=1.24e-03, kld=25.49, recon=8.50e-04(max=3.08e-03), time=63588.99
-coverage for testsize 1000 is :0.978
-eval in47.27188992500305
-epoch=20800, avg_loss=1.24e-03, kld=25.54, recon=8.47e-04(max=5.62e-03), time=63874.93
-coverage for testsize 1000 is :0.986
-eval in42.69186043739319
-epoch=20900, avg_loss=1.24e-03, kld=25.55, recon=8.45e-04(max=2.13e-03), time=64148.32
-coverage for testsize 1000 is :0.978
-eval in43.994908809661865
-save model
-epoch=21000, avg_loss=1.24e-03, kld=25.39, recon=8.58e-04(max=4.01e-03), time=64428.27
-coverage for testsize 10000 is :0.8459
-eval in426.6982409954071
-save model
-epoch=21100, avg_loss=1.24e-03, kld=25.40, recon=8.51e-04(max=2.68e-03), time=65082.13
-coverage for testsize 1000 is :0.983
-eval in43.123430013656616
-epoch=21200, avg_loss=1.24e-03, kld=25.42, recon=8.54e-04(max=4.98e-03), time=65371.45
-coverage for testsize 1000 is :0.982
-eval in43.07160258293152
-epoch=21300, avg_loss=1.24e-03, kld=25.56, recon=8.49e-04(max=3.86e-03), time=65640.47
-coverage for testsize 1000 is :0.987
-eval in43.562021017074585
-epoch=21400, avg_loss=1.24e-03, kld=25.51, recon=8.48e-04(max=3.98e-03), time=65937.85
-coverage for testsize 1000 is :0.981
-eval in43.91571617126465
-epoch=21500, avg_loss=1.24e-03, kld=25.51, recon=8.48e-04(max=6.11e-03), time=66220.41
-coverage for testsize 1000 is :0.973
-eval in43.857897996902466
-save model
-epoch=21600, avg_loss=1.23e-03, kld=25.52, recon=8.48e-04(max=2.56e-03), time=66492.45
-coverage for testsize 1000 is :0.984
-eval in43.61484622955322
-save model
-epoch=21700, avg_loss=1.23e-03, kld=25.49, recon=8.51e-04(max=4.29e-03), time=66767.63
-coverage for testsize 1000 is :0.983
-eval in43.425649881362915
-save model
-epoch=21800, avg_loss=1.24e-03, kld=25.56, recon=8.45e-04(max=4.49e-03), time=67034.21
-coverage for testsize 1000 is :0.978
-eval in43.446624994277954
-epoch=21900, avg_loss=1.24e-03, kld=25.48, recon=8.52e-04(max=4.01e-03), time=67331.66
-coverage for testsize 1000 is :0.98
-eval in44.05410814285278
-epoch=22000, avg_loss=1.23e-03, kld=25.47, recon=8.50e-04(max=3.24e-03), time=67598.61
-coverage for testsize 10000 is :0.8485
-eval in437.90353298187256
-save model
-epoch=22100, avg_loss=1.23e-03, kld=25.54, recon=8.47e-04(max=3.45e-03), time=68260.23
-coverage for testsize 1000 is :0.977
-eval in46.137770891189575
-epoch=22200, avg_loss=1.23e-03, kld=25.52, recon=8.49e-04(max=4.25e-03), time=68534.98
-coverage for testsize 1000 is :0.979
-eval in42.95606017112732
-epoch=22300, avg_loss=1.23e-03, kld=25.55, recon=8.45e-04(max=6.85e-03), time=68808.37
-coverage for testsize 1000 is :0.971
-eval in43.28441405296326
-epoch=22400, avg_loss=1.24e-03, kld=25.56, recon=8.46e-04(max=5.20e-03), time=69084.92
-coverage for testsize 1000 is :0.979
-eval in43.58457803726196
-epoch=22500, avg_loss=1.23e-03, kld=25.60, recon=8.44e-04(max=3.19e-03), time=69377.00
-coverage for testsize 1000 is :0.992
-eval in42.758925914764404
-epoch=22600, avg_loss=1.24e-03, kld=25.59, recon=8.41e-04(max=2.21e-03), time=69668.25
-coverage for testsize 1000 is :0.981
-eval in43.351433515548706
-epoch=22700, avg_loss=1.23e-03, kld=25.46, recon=8.50e-04(max=6.36e-03), time=69944.83
-coverage for testsize 1000 is :0.985
-eval in43.12518048286438
-save model
-epoch=22800, avg_loss=1.23e-03, kld=25.58, recon=8.44e-04(max=6.33e-03), time=70230.98
-coverage for testsize 1000 is :0.965
-eval in43.142274379730225
-epoch=22900, avg_loss=1.23e-03, kld=25.43, recon=8.52e-04(max=4.09e-03), time=70515.25
-coverage for testsize 1000 is :0.989
-eval in43.36220145225525
-epoch=23000, avg_loss=1.24e-03, kld=25.56, recon=8.45e-04(max=4.59e-03), time=70788.74
-coverage for testsize 10000 is :0.8472
-eval in432.01793217658997
-epoch=23100, avg_loss=1.23e-03, kld=25.53, recon=8.45e-04(max=4.14e-03), time=71465.13
-coverage for testsize 1000 is :0.973
-eval in44.217987060546875
-epoch=23200, avg_loss=1.24e-03, kld=25.60, recon=8.42e-04(max=3.75e-03), time=71734.11
-coverage for testsize 1000 is :0.978
-eval in43.7847216129303
-epoch=23300, avg_loss=1.23e-03, kld=25.30, recon=8.85e-04(max=5.06e-03), time=72026.38
-coverage for testsize 1000 is :0.975
-eval in42.7550733089447
-save model
-epoch=23400, avg_loss=1.23e-03, kld=25.61, recon=8.40e-04(max=2.96e-03), time=72299.51
-coverage for testsize 1000 is :0.988
-eval in42.92143535614014
-epoch=23500, avg_loss=1.23e-03, kld=25.50, recon=8.45e-04(max=3.54e-03), time=72587.59
-coverage for testsize 1000 is :0.983
-eval in46.3379864692688
-epoch=23600, avg_loss=1.23e-03, kld=25.61, recon=8.42e-04(max=2.84e-03), time=72857.62
-coverage for testsize 1000 is :0.981
-eval in44.10431408882141
-epoch=23700, avg_loss=1.23e-03, kld=25.62, recon=8.38e-04(max=6.98e-03), time=73132.83
-coverage for testsize 1000 is :0.983
-eval in42.85830092430115
-epoch=23800, avg_loss=1.23e-03, kld=25.50, recon=8.54e-04(max=3.99e-03), time=73412.07
-coverage for testsize 1000 is :0.98
-eval in44.837186098098755
-epoch=23900, avg_loss=1.23e-03, kld=25.44, recon=8.50e-04(max=5.11e-03), time=73689.61
-coverage for testsize 1000 is :0.98
-eval in43.7525315284729
-save model
-epoch=24000, avg_loss=1.23e-03, kld=25.56, recon=8.46e-04(max=2.68e-03), time=73960.28
-coverage for testsize 10000 is :0.8459
-eval in434.3729672431946
-epoch=24100, avg_loss=1.23e-03, kld=25.59, recon=8.39e-04(max=4.65e-03), time=74644.98
-coverage for testsize 1000 is :0.979
-eval in43.70531415939331
-save model
-epoch=24200, avg_loss=1.23e-03, kld=25.59, recon=8.40e-04(max=3.27e-03), time=74913.08
-coverage for testsize 1000 is :0.981
-eval in42.893627882003784
-epoch=24300, avg_loss=1.23e-03, kld=25.13, recon=8.91e-04(max=6.16e-03), time=75192.60
-coverage for testsize 1000 is :0.98
-eval in43.8583722114563
-epoch=24400, avg_loss=1.23e-03, kld=25.63, recon=8.39e-04(max=3.50e-03), time=75463.42
-coverage for testsize 1000 is :0.98
-eval in43.82352018356323
-epoch=24500, avg_loss=1.23e-03, kld=25.43, recon=8.54e-04(max=4.13e-03), time=75737.66
-coverage for testsize 1000 is :0.978
-eval in44.028085470199585
-epoch=24600, avg_loss=1.23e-03, kld=25.56, recon=8.44e-04(max=5.44e-03), time=76011.95
-coverage for testsize 1000 is :0.974
-eval in42.881995677948
-epoch=24700, avg_loss=1.23e-03, kld=25.47, recon=8.45e-04(max=5.69e-03), time=76271.17
-coverage for testsize 1000 is :0.979
-eval in42.88384699821472
-epoch=24800, avg_loss=1.23e-03, kld=25.29, recon=8.76e-04(max=6.54e-03), time=76530.05
-coverage for testsize 1000 is :0.982
-eval in42.627994537353516
-epoch=24900, avg_loss=1.23e-03, kld=25.56, recon=8.43e-04(max=3.86e-03), time=76823.78
-coverage for testsize 1000 is :0.977
-eval in46.428369998931885
-epoch=25000, avg_loss=1.23e-03, kld=25.54, recon=8.45e-04(max=5.16e-03), time=77102.77
-coverage for testsize 10000 is :0.8464
-eval in421.5895881652832
-epoch=25100, avg_loss=1.23e-03, kld=25.57, recon=8.44e-04(max=3.64e-03), time=77780.79
-coverage for testsize 1000 is :0.981
-eval in44.118348836898804
-epoch=25200, avg_loss=1.23e-03, kld=25.52, recon=8.46e-04(max=3.44e-03), time=78051.51
-coverage for testsize 1000 is :0.978
-eval in43.76189994812012
-epoch=25300, avg_loss=1.23e-03, kld=25.24, recon=8.80e-04(max=1.29e-02), time=78327.04
-coverage for testsize 1000 is :0.977
-eval in43.12825059890747
-epoch=25400, avg_loss=1.23e-03, kld=25.47, recon=8.50e-04(max=5.00e-03), time=78596.97
-coverage for testsize 1000 is :0.98
-eval in44.102282762527466
-save model
-epoch=25500, avg_loss=1.23e-03, kld=25.58, recon=8.45e-04(max=6.68e-03), time=78879.42
-coverage for testsize 1000 is :0.977
-eval in43.04203915596008
-save model
-epoch=25600, avg_loss=1.23e-03, kld=25.35, recon=8.76e-04(max=6.97e-03), time=79149.73
-coverage for testsize 1000 is :0.983
-eval in43.609806537628174
-epoch=25700, avg_loss=1.23e-03, kld=25.50, recon=8.45e-04(max=2.55e-03), time=79419.56
-coverage for testsize 1000 is :0.984
-eval in43.94426250457764
-epoch=25800, avg_loss=1.23e-03, kld=25.54, recon=8.44e-04(max=4.40e-03), time=79694.55
-coverage for testsize 1000 is :0.977
-eval in43.619751930236816
-epoch=25900, avg_loss=1.23e-03, kld=25.39, recon=8.63e-04(max=6.71e-03), time=79964.47
-coverage for testsize 1000 is :0.984
-eval in43.93617057800293
-epoch=26000, avg_loss=1.23e-03, kld=25.48, recon=8.49e-04(max=5.14e-03), time=80237.29
-coverage for testsize 10000 is :0.8465
-eval in439.6593110561371
-epoch=26100, avg_loss=1.23e-03, kld=25.47, recon=8.52e-04(max=4.89e-03), time=80907.84
-coverage for testsize 1000 is :0.987
-eval in42.805577516555786
-save model
-epoch=26200, avg_loss=1.23e-03, kld=25.44, recon=8.53e-04(max=3.66e-03), time=81194.52
-coverage for testsize 1000 is :0.983
-eval in43.16141223907471
-epoch=26300, avg_loss=1.23e-03, kld=25.44, recon=8.54e-04(max=5.80e-03), time=81464.32
-coverage for testsize 1000 is :0.98
-eval in46.04910588264465
-epoch=26400, avg_loss=1.23e-03, kld=25.50, recon=8.48e-04(max=5.27e-03), time=81741.96
-coverage for testsize 1000 is :0.98
-eval in43.41451954841614
-epoch=26500, avg_loss=1.23e-03, kld=25.60, recon=8.40e-04(max=2.79e-03), time=82006.96
-coverage for testsize 1000 is :0.983
-eval in42.907116413116455
-epoch=26600, avg_loss=1.23e-03, kld=25.56, recon=8.39e-04(max=4.83e-03), time=82288.74
-coverage for testsize 1000 is :0.981
-eval in43.02842998504639
-epoch=26700, avg_loss=1.23e-03, kld=25.64, recon=8.37e-04(max=3.72e-03), time=82605.09
-coverage for testsize 1000 is :0.983
-eval in44.172868967056274
-epoch=26800, avg_loss=1.23e-03, kld=25.73, recon=8.33e-04(max=3.00e-03), time=82892.87
-coverage for testsize 1000 is :0.979
-eval in43.23840022087097
-epoch=26900, avg_loss=1.23e-03, kld=25.65, recon=8.38e-04(max=2.53e-03), time=83154.89
-coverage for testsize 1000 is :0.984
-eval in43.466907262802124
-epoch=27000, avg_loss=1.23e-03, kld=25.56, recon=8.40e-04(max=3.88e-03), time=83422.48
-coverage for testsize 10000 is :0.8453
-eval in428.1079707145691
-epoch=27100, avg_loss=1.23e-03, kld=25.43, recon=8.53e-04(max=8.25e-03), time=84069.67
-coverage for testsize 1000 is :0.98
-eval in43.78693652153015
-epoch=27200, avg_loss=1.23e-03, kld=25.59, recon=8.39e-04(max=2.86e-03), time=84342.35
-coverage for testsize 1000 is :0.981
-eval in43.68541216850281
-epoch=27300, avg_loss=1.23e-03, kld=25.61, recon=8.38e-04(max=2.78e-03), time=84610.91
-coverage for testsize 1000 is :0.979
-eval in42.79489755630493
-epoch=27400, avg_loss=1.23e-03, kld=25.61, recon=8.42e-04(max=3.03e-03), time=84871.51
-coverage for testsize 1000 is :0.98
-eval in43.487489223480225
-epoch=27500, avg_loss=1.23e-03, kld=25.50, recon=8.47e-04(max=4.10e-03), time=85121.88
-coverage for testsize 1000 is :0.974
-eval in42.59808921813965
-epoch=27600, avg_loss=1.23e-03, kld=25.65, recon=8.36e-04(max=5.18e-03), time=85387.74
-coverage for testsize 1000 is :0.988
-eval in47.025190353393555
-save model
-epoch=27700, avg_loss=1.23e-03, kld=25.49, recon=8.47e-04(max=3.43e-03), time=85661.81
-coverage for testsize 1000 is :0.976
-eval in42.9009006023407
-epoch=27800, avg_loss=1.23e-03, kld=25.59, recon=8.40e-04(max=4.03e-03), time=85919.77
-coverage for testsize 1000 is :0.98
-eval in42.391446113586426
-epoch=27900, avg_loss=1.23e-03, kld=25.56, recon=8.45e-04(max=3.11e-03), time=86182.38
-coverage for testsize 1000 is :0.979
-eval in43.175580978393555
-epoch=28000, avg_loss=1.23e-03, kld=25.61, recon=8.37e-04(max=3.53e-03), time=86448.33
-coverage for testsize 10000 is :0.8489
-eval in429.4774203300476
-epoch=28100, avg_loss=1.23e-03, kld=25.55, recon=8.44e-04(max=4.42e-03), time=87099.07
-coverage for testsize 1000 is :0.974
-eval in43.35538959503174
-epoch=28200, avg_loss=1.23e-03, kld=25.61, recon=8.40e-04(max=3.03e-03), time=87350.09
-coverage for testsize 1000 is :0.981
-eval in43.5115282535553
-save model
-epoch=28300, avg_loss=1.23e-03, kld=25.65, recon=8.36e-04(max=3.36e-03), time=87609.29
-coverage for testsize 1000 is :0.975
-eval in42.51323699951172
-epoch=28400, avg_loss=1.23e-03, kld=25.57, recon=8.40e-04(max=4.26e-03), time=87864.06
-coverage for testsize 1000 is :0.97
-eval in43.959259033203125
-epoch=28500, avg_loss=1.23e-03, kld=25.59, recon=8.43e-04(max=3.93e-03), time=88125.70
-coverage for testsize 1000 is :0.976
-eval in43.873727560043335
-epoch=28600, avg_loss=1.23e-03, kld=25.61, recon=8.38e-04(max=4.27e-03), time=88385.85
-coverage for testsize 1000 is :0.984
-eval in42.91759657859802
-epoch=28700, avg_loss=1.23e-03, kld=25.72, recon=8.30e-04(max=3.06e-03), time=88656.81
-coverage for testsize 1000 is :0.975
-eval in44.070481061935425
-epoch=28800, avg_loss=1.23e-03, kld=25.47, recon=8.46e-04(max=4.60e-03), time=88936.08
-coverage for testsize 1000 is :0.974
-eval in42.98820972442627
-epoch=28900, avg_loss=1.23e-03, kld=25.66, recon=8.35e-04(max=2.77e-03), time=89190.37
-coverage for testsize 1000 is :0.982
-eval in42.714436769485474
-epoch=29000, avg_loss=1.23e-03, kld=25.56, recon=8.43e-04(max=4.40e-03), time=89443.17
-coverage for testsize 10000 is :0.8546
-eval in430.2339870929718
-epoch=29100, avg_loss=1.23e-03, kld=25.64, recon=8.33e-04(max=2.87e-03), time=90084.85
-coverage for testsize 1000 is :0.986
-eval in43.106929779052734
-epoch=29200, avg_loss=1.23e-03, kld=25.64, recon=8.37e-04(max=3.40e-03), time=90337.32
-coverage for testsize 1000 is :0.986
-eval in43.04692316055298
-epoch=29300, avg_loss=1.23e-03, kld=25.57, recon=8.37e-04(max=4.58e-03), time=90602.86
-coverage for testsize 1000 is :0.98
-eval in44.05126404762268
-epoch=29400, avg_loss=1.23e-03, kld=25.70, recon=8.30e-04(max=3.42e-03), time=90857.93
-coverage for testsize 1000 is :0.985
-eval in42.86357831954956
-epoch=29500, avg_loss=1.23e-03, kld=25.60, recon=8.40e-04(max=5.52e-03), time=91118.00
-coverage for testsize 1000 is :0.985
-eval in43.17050313949585
-epoch=29600, avg_loss=1.23e-03, kld=25.72, recon=8.30e-04(max=3.54e-03), time=91383.57
-coverage for testsize 1000 is :0.982
-eval in43.616915702819824
-save model
-epoch=29700, avg_loss=1.23e-03, kld=25.33, recon=8.63e-04(max=5.69e-03), time=91635.79
-coverage for testsize 1000 is :0.98
-eval in43.61310029029846
-epoch=29800, avg_loss=1.23e-03, kld=25.52, recon=8.45e-04(max=3.04e-03), time=91891.05
-coverage for testsize 1000 is :0.989
-eval in44.2228217124939
-epoch=29900, avg_loss=1.23e-03, kld=25.51, recon=8.45e-04(max=2.93e-03), time=92161.70
-coverage for testsize 1000 is :0.976
-eval in43.859084606170654
-epoch=30000, avg_loss=1.23e-03, kld=25.58, recon=8.37e-04(max=5.31e-03), time=92424.88
-coverage for testsize 10000 is :0.8453
-eval in419.8396213054657
-epoch=30100, avg_loss=1.23e-03, kld=25.45, recon=8.66e-04(max=1.95e-02), time=93060.29
-coverage for testsize 1000 is :0.979
-eval in44.27986764907837
-epoch=30200, avg_loss=1.23e-03, kld=25.56, recon=8.42e-04(max=3.20e-03), time=93319.91
-coverage for testsize 1000 is :0.987
-eval in42.58989143371582
-epoch=30300, avg_loss=1.23e-03, kld=25.57, recon=8.43e-04(max=3.80e-03), time=93579.83
-coverage for testsize 1000 is :0.985
-eval in42.64850187301636
-epoch=30400, avg_loss=1.23e-03, kld=25.55, recon=8.45e-04(max=3.75e-03), time=93832.01
-coverage for testsize 1000 is :0.974
-eval in42.76094126701355
-epoch=30500, avg_loss=1.23e-03, kld=25.43, recon=8.55e-04(max=3.51e-03), time=94075.62
-coverage for testsize 1000 is :0.971
-eval in46.00091767311096
-epoch=30600, avg_loss=1.23e-03, kld=25.57, recon=8.42e-04(max=3.39e-03), time=94340.89
-coverage for testsize 1000 is :0.98
-eval in43.44358849525452
-epoch=30700, avg_loss=1.23e-03, kld=25.55, recon=8.42e-04(max=3.62e-03), time=94592.23
-coverage for testsize 1000 is :0.983
-eval in42.777719497680664
-epoch=30800, avg_loss=1.23e-03, kld=25.46, recon=8.68e-04(max=5.25e-03), time=94839.84
-coverage for testsize 1000 is :0.973
-eval in43.17521286010742
-epoch=30900, avg_loss=1.23e-03, kld=25.64, recon=8.35e-04(max=4.37e-03), time=95093.40
-coverage for testsize 1000 is :0.975
-eval in44.114951848983765
-epoch=31000, avg_loss=1.23e-03, kld=25.50, recon=8.52e-04(max=3.66e-03), time=95339.58
-coverage for testsize 10000 is :0.8418
-eval in426.79070472717285
-epoch=31100, avg_loss=1.23e-03, kld=25.60, recon=8.37e-04(max=2.88e-03), time=95991.47
-coverage for testsize 1000 is :0.979
-eval in43.56779170036316
-epoch=31200, avg_loss=1.23e-03, kld=25.65, recon=8.36e-04(max=3.97e-03), time=96254.69
-coverage for testsize 1000 is :0.987
-eval in43.296369552612305
-epoch=31300, avg_loss=1.23e-03, kld=25.51, recon=8.47e-04(max=4.88e-03), time=96522.10
-coverage for testsize 1000 is :0.981
-eval in42.36771321296692
-epoch=31400, avg_loss=1.23e-03, kld=25.66, recon=8.32e-04(max=2.63e-03), time=96775.14
-coverage for testsize 1000 is :0.977
-eval in42.394046783447266
-epoch=31500, avg_loss=1.23e-03, kld=25.41, recon=8.65e-04(max=5.36e-03), time=97022.49
-coverage for testsize 1000 is :0.978
-eval in43.29428958892822
-epoch=31600, avg_loss=1.23e-03, kld=25.62, recon=8.36e-04(max=4.48e-03), time=97272.42
-coverage for testsize 1000 is :0.984
-eval in43.532628774642944
-epoch=31700, avg_loss=1.23e-03, kld=25.49, recon=8.54e-04(max=6.49e-03), time=97527.38
-coverage for testsize 1000 is :0.978
-eval in43.51278758049011
-epoch=31800, avg_loss=1.23e-03, kld=25.69, recon=8.28e-04(max=3.60e-03), time=97787.91
-coverage for testsize 1000 is :0.986
-eval in43.61814212799072
-epoch=31900, avg_loss=1.23e-03, kld=25.55, recon=8.40e-04(max=4.35e-03), time=98057.96
-coverage for testsize 1000 is :0.982
-eval in46.80534625053406
-epoch=32000, avg_loss=1.23e-03, kld=25.64, recon=8.32e-04(max=6.40e-03), time=98317.52
-coverage for testsize 10000 is :0.85
-eval in424.5886957645416
-epoch=32100, avg_loss=1.23e-03, kld=25.62, recon=8.40e-04(max=9.44e-03), time=98956.68
-coverage for testsize 1000 is :0.979
-eval in43.62890672683716
-epoch=32200, avg_loss=1.23e-03, kld=25.71, recon=8.30e-04(max=6.40e-03), time=99218.51
-coverage for testsize 1000 is :0.984
-eval in43.32751250267029
-epoch=32300, avg_loss=1.23e-03, kld=25.57, recon=8.38e-04(max=3.51e-03), time=99479.57
-coverage for testsize 1000 is :0.982
-eval in43.574400901794434
-epoch=32400, avg_loss=1.23e-03, kld=25.55, recon=8.44e-04(max=6.20e-03), time=99728.96
-coverage for testsize 1000 is :0.979
-eval in43.76368474960327
-epoch=32500, avg_loss=1.23e-03, kld=25.55, recon=8.42e-04(max=2.97e-03), time=99992.11
-coverage for testsize 1000 is :0.985
-eval in42.57775592803955
-epoch=32600, avg_loss=1.23e-03, kld=25.52, recon=8.40e-04(max=3.42e-03), time=100262.01
-coverage for testsize 1000 is :0.97
-eval in43.405850887298584
-epoch=32700, avg_loss=1.23e-03, kld=25.59, recon=8.38e-04(max=3.75e-03), time=100533.46
-coverage for testsize 1000 is :0.983
-eval in42.96766257286072
-epoch=32800, avg_loss=1.23e-03, kld=25.59, recon=8.39e-04(max=5.42e-03), time=100799.79
-coverage for testsize 1000 is :0.983
-eval in43.69698929786682
-epoch=32900, avg_loss=1.23e-03, kld=25.54, recon=8.41e-04(max=3.37e-03), time=101065.28
-coverage for testsize 1000 is :0.98
-eval in43.36346936225891
-epoch=33000, avg_loss=1.23e-03, kld=25.53, recon=8.41e-04(max=3.57e-03), time=101329.28
-coverage for testsize 10000 is :0.8549
-eval in433.09177446365356
-epoch=33100, avg_loss=1.23e-03, kld=25.60, recon=8.36e-04(max=4.96e-03), time=101982.91
-coverage for testsize 1000 is :0.976
-eval in43.77350687980652
-epoch=33200, avg_loss=1.23e-03, kld=25.63, recon=8.32e-04(max=2.78e-03), time=102246.59
-coverage for testsize 1000 is :0.985
-eval in42.5539116859436
-epoch=33300, avg_loss=1.23e-03, kld=25.45, recon=8.54e-04(max=4.44e-03), time=102518.91
-coverage for testsize 1000 is :0.979
-eval in46.31309199333191
-epoch=33400, avg_loss=1.23e-03, kld=25.62, recon=8.33e-04(max=3.83e-03), time=102784.07
-coverage for testsize 1000 is :0.978
-eval in44.49184513092041
-epoch=33500, avg_loss=1.23e-03, kld=25.70, recon=8.29e-04(max=3.20e-03), time=103037.64
-coverage for testsize 1000 is :0.984
-eval in42.33615732192993
-epoch=33600, avg_loss=1.23e-03, kld=25.54, recon=8.54e-04(max=6.56e-03), time=103291.14
-coverage for testsize 1000 is :0.975
-eval in43.22185182571411
-epoch=33700, avg_loss=1.23e-03, kld=25.53, recon=8.46e-04(max=6.15e-03), time=103547.54
-coverage for testsize 1000 is :0.981
-eval in43.400574684143066
-epoch=33800, avg_loss=1.23e-03, kld=25.63, recon=8.35e-04(max=2.65e-03), time=103794.64
-coverage for testsize 1000 is :0.977
-eval in44.04549241065979
-epoch=33900, avg_loss=1.22e-03, kld=25.59, recon=8.37e-04(max=4.49e-03), time=104056.62
-coverage for testsize 1000 is :0.984
-eval in43.09484028816223
-save model
-epoch=34000, avg_loss=1.23e-03, kld=25.71, recon=8.30e-04(max=6.82e-03), time=104318.27
-coverage for testsize 10000 is :0.8471
-eval in426.10978507995605
-epoch=34100, avg_loss=1.23e-03, kld=25.65, recon=8.34e-04(max=3.55e-03), time=104966.39
-coverage for testsize 1000 is :0.984
-eval in42.96499752998352
-epoch=34200, avg_loss=1.23e-03, kld=25.32, recon=8.95e-04(max=6.00e-03), time=105233.02
-coverage for testsize 1000 is :0.978
-eval in43.18606472015381
-epoch=34300, avg_loss=1.23e-03, kld=25.74, recon=8.29e-04(max=4.11e-03), time=105482.23
-coverage for testsize 1000 is :0.98
-eval in42.94172644615173
-epoch=34400, avg_loss=1.23e-03, kld=25.41, recon=8.52e-04(max=4.52e-03), time=105736.86
-coverage for testsize 1000 is :0.973
-eval in42.799384355545044
-epoch=34500, avg_loss=1.23e-03, kld=25.45, recon=8.50e-04(max=3.53e-03), time=105980.66
-coverage for testsize 1000 is :0.978
-eval in43.74022722244263
-epoch=34600, avg_loss=1.23e-03, kld=25.65, recon=8.32e-04(max=2.89e-03), time=106236.72
-coverage for testsize 1000 is :0.984
-eval in43.24463486671448
-epoch=34700, avg_loss=1.23e-03, kld=25.74, recon=8.26e-04(max=3.20e-03), time=106526.68
-coverage for testsize 1000 is :0.983
-eval in47.07525873184204
-epoch=34800, avg_loss=1.23e-03, kld=25.59, recon=8.38e-04(max=3.56e-03), time=106802.76
-coverage for testsize 1000 is :0.982
-eval in42.666600704193115
-epoch=34900, avg_loss=1.23e-03, kld=25.58, recon=8.36e-04(max=2.54e-03), time=107065.28
-coverage for testsize 1000 is :0.975
-eval in42.39117407798767
-epoch=35000, avg_loss=1.23e-03, kld=25.45, recon=8.54e-04(max=2.40e-02), time=107345.66
-coverage for testsize 10000 is :0.8478
-eval in432.738566160202
-epoch=35100, avg_loss=1.23e-03, kld=25.54, recon=8.43e-04(max=4.74e-03), time=108009.38
-coverage for testsize 1000 is :0.978
-eval in43.4504554271698
-epoch=35200, avg_loss=1.23e-03, kld=25.55, recon=8.39e-04(max=1.10e-02), time=108273.62
-coverage for testsize 1000 is :0.981
-eval in44.19660186767578
-epoch=35300, avg_loss=1.23e-03, kld=25.61, recon=8.36e-04(max=3.29e-03), time=108542.11
-coverage for testsize 1000 is :0.985
-eval in43.51235771179199
-epoch=35400, avg_loss=1.23e-03, kld=25.54, recon=8.42e-04(max=5.96e-03), time=108800.11
-coverage for testsize 1000 is :0.988
-eval in42.953447341918945
-epoch=35500, avg_loss=1.23e-03, kld=25.62, recon=8.35e-04(max=3.83e-03), time=109067.72
-coverage for testsize 1000 is :0.985
-eval in43.66684341430664
-epoch=35600, avg_loss=1.23e-03, kld=25.55, recon=8.39e-04(max=6.37e-03), time=109339.69
-coverage for testsize 1000 is :0.979
-eval in43.8290114402771
-epoch=35700, avg_loss=1.23e-03, kld=25.36, recon=8.71e-04(max=6.52e-03), time=109611.05
-coverage for testsize 1000 is :0.979
-eval in43.51976561546326
-epoch=35800, avg_loss=1.23e-03, kld=25.55, recon=8.39e-04(max=4.83e-03), time=109863.86
-coverage for testsize 1000 is :0.988
-eval in43.95359206199646
-epoch=35900, avg_loss=1.23e-03, kld=25.66, recon=8.33e-04(max=4.18e-03), time=110120.73
-coverage for testsize 1000 is :0.987
-eval in43.641345262527466
-epoch=36000, avg_loss=1.23e-03, kld=25.37, recon=8.63e-04(max=5.18e-03), time=110400.80
-coverage for testsize 10000 is :0.852
-eval in417.7892470359802
-epoch=36100, avg_loss=1.23e-03, kld=25.50, recon=8.47e-04(max=4.85e-03), time=111020.09
-coverage for testsize 1000 is :0.981
-eval in45.95869588851929
-epoch=36200, avg_loss=1.23e-03, kld=25.64, recon=8.37e-04(max=3.37e-03), time=111291.37
-coverage for testsize 1000 is :0.984
-eval in43.434020042419434
-epoch=36300, avg_loss=1.23e-03, kld=25.56, recon=8.40e-04(max=3.90e-03), time=111539.36
-coverage for testsize 1000 is :0.98
-eval in43.04606556892395
-epoch=36400, avg_loss=1.23e-03, kld=25.49, recon=8.49e-04(max=5.85e-03), time=111786.04
-coverage for testsize 1000 is :0.987
-eval in42.74509525299072
-epoch=36500, avg_loss=1.24e-03, kld=24.89, recon=9.25e-04(max=6.49e-03), time=112049.49
-coverage for testsize 1000 is :0.986
-eval in43.347712993621826
-epoch=36600, avg_loss=1.23e-03, kld=25.53, recon=8.47e-04(max=1.22e-02), time=112311.65
-coverage for testsize 1000 is :0.988
-eval in42.807451486587524
-epoch=36700, avg_loss=1.23e-03, kld=25.55, recon=8.41e-04(max=1.02e-02), time=112565.17
-coverage for testsize 1000 is :0.984
-eval in42.74512982368469
-epoch=36800, avg_loss=1.23e-03, kld=25.58, recon=8.35e-04(max=7.21e-03), time=112821.97
-coverage for testsize 1000 is :0.983
-eval in42.98219347000122
-epoch=36900, avg_loss=1.24e-03, kld=25.27, recon=8.81e-04(max=8.51e-03), time=113089.53
-coverage for testsize 1000 is :0.986
-eval in43.43129587173462
-epoch=37000, avg_loss=1.23e-03, kld=25.49, recon=8.43e-04(max=3.28e-03), time=113352.28
-coverage for testsize 10000 is :0.8536
-eval in420.69081711769104
-epoch=37100, avg_loss=1.23e-03, kld=25.59, recon=8.41e-04(max=2.01e-02), time=113980.71
-coverage for testsize 1000 is :0.979
-eval in42.945714473724365
-epoch=37200, avg_loss=1.24e-03, kld=25.48, recon=8.45e-04(max=5.03e-03), time=114236.12
-coverage for testsize 1000 is :0.981
-eval in43.030903577804565
-epoch=37300, avg_loss=1.24e-03, kld=25.52, recon=8.44e-04(max=6.86e-03), time=114498.47
-coverage for testsize 1000 is :0.977
-eval in42.8890962600708
-epoch=37400, avg_loss=1.24e-03, kld=25.48, recon=8.39e-04(max=3.89e-03), time=114753.65
-coverage for testsize 1000 is :0.984
-eval in42.45287728309631
-epoch=37500, avg_loss=1.24e-03, kld=25.51, recon=8.41e-04(max=4.14e-03), time=115017.30
-coverage for testsize 1000 is :0.987
-eval in43.350417375564575
+get locality in 6m 6s
+start in: 2023/11/21 11:38:38
+/root/Encore-CVAE/size_cvae.py:113: DeprecationWarning: Sampling from a set deprecated
+since Python 3.9 and will be removed in a subsequent version.
+  condition = random.sample(locality_onehots_dict.keys(),min(len(locality_onehots_dict.keys()),500))
+epoch=100, avg_loss=2.89e-03, kld=323.33, recon=1.75e-03(max=1.24e-02), time=272.59
+eval in51.11590218544006 //coverage is 0.6865 on average and is 0.1212 for the worst //per sample error is 0.2779 on average and is 0.7063 for the worst //per source data error is 0.1508 on average and is 0.2294 for the worst
+save model
+epoch=200, avg_loss=2.25e-03, kld=22.52, recon=1.63e-03(max=9.74e-03), time=590.42
+eval in48.38308548927307 //coverage is 0.8753 on average and is 0.3999 for the worst //per sample error is 0.1176 on average and is 0.4033 for the worst //per source data error is 0.0354 on average and is 0.0903 for the worst
+save model
+epoch=300, avg_loss=2.19e-03, kld=15.04, recon=1.62e-03(max=9.21e-03), time=1021.59
+eval in46.03378200531006 //coverage is 0.9274 on average and is 0.3325 for the worst //per sample error is 0.0656 on average and is 0.2087 for the worst //per source data error is 0.0289 on average and is 0.1023 for the worst
+save model
+epoch=400, avg_loss=2.23e-03, kld=13.94, recon=1.56e-03(max=5.78e-03), time=1341.74
+eval in51.81181597709656 //coverage is 0.9222 on average and is 0.2856 for the worst //per sample error is 0.0486 on average and is 0.1344 for the worst //per source data error is 0.0275 on average and is 0.1133 for the worst
+epoch=500, avg_loss=2.28e-03, kld=12.54, recon=1.57e-03(max=6.15e-03), time=1658.06
+eval in60.19904804229736 //coverage is 0.9349 on average and is 0.4993 for the worst //per sample error is 0.0466 on average and is 0.1247 for the worst //per source data error is 0.0254 on average and is 0.1100 for the worst
+epoch=600, avg_loss=2.37e-03, kld=11.40, recon=1.58e-03(max=3.45e-03), time=1982.74
+eval in65.51353621482849 //coverage is 0.9283 on average and is 0.5891 for the worst //per sample error is 0.0407 on average and is 0.1158 for the worst //per source data error is 0.0232 on average and is 0.0955 for the worst
+epoch=700, avg_loss=2.45e-03, kld=10.41, recon=1.61e-03(max=4.67e-03), time=2319.34
+eval in60.452728509902954 //coverage is 0.9353 on average and is 0.5410 for the worst //per sample error is 0.0402 on average and is 0.1068 for the worst //per source data error is 0.0244 on average and is 0.0896 for the worst
+epoch=800, avg_loss=2.53e-03, kld=9.50, recon=1.65e-03(max=4.51e-03), time=2640.82
+eval in57.747753858566284 //coverage is 0.9419 on average and is 0.5656 for the worst //per sample error is 0.0390 on average and is 0.1063 for the worst //per source data error is 0.0224 on average and is 0.0768 for the worst
+epoch=900, avg_loss=2.61e-03, kld=8.83, recon=1.68e-03(max=6.40e-03), time=2968.67
+eval in48.146748065948486 //coverage is 0.9431 on average and is 0.6056 for the worst //per sample error is 0.0392 on average and is 0.1132 for the worst //per source data error is 0.0217 on average and is 0.0780 for the worst
+epoch=1000, avg_loss=2.68e-03, kld=8.15, recon=1.71e-03(max=1.01e-02), time=3288.67
+eval in658.3136110305786 //coverage is 0.9941 on average and is 0.8945 for the worst //per sample error is 0.0371 on average and is 0.1090 for the worst //per source data error is 0.0156 on average and is 0.0432 for the worst
+epoch=1100, avg_loss=2.75e-03, kld=7.53, recon=1.75e-03(max=4.19e-03), time=4348.49
+eval in52.313894271850586 //coverage is 0.9350 on average and is 0.6047 for the worst //per sample error is 0.0378 on average and is 0.1068 for the worst //per source data error is 0.0215 on average and is 0.0801 for the worst
+epoch=1200, avg_loss=2.77e-03, kld=7.49, recon=1.74e-03(max=3.85e-03), time=4669.79
+eval in62.7700412273407 //coverage is 0.9356 on average and is 0.5949 for the worst //per sample error is 0.0375 on average and is 0.1119 for the worst //per source data error is 0.0212 on average and is 0.0753 for the worst
+epoch=1300, avg_loss=2.76e-03, kld=7.51, recon=1.73e-03(max=6.47e-03), time=5015.00
+eval in60.05643582344055 //coverage is 0.9304 on average and is 0.5810 for the worst //per sample error is 0.0350 on average and is 0.1066 for the worst //per source data error is 0.0219 on average and is 0.0908 for the worst
+epoch=1400, avg_loss=2.74e-03, kld=7.50, recon=1.72e-03(max=3.60e-03), time=5348.23
+eval in60.78167796134949 //coverage is 0.9300 on average and is 0.5959 for the worst //per sample error is 0.0347 on average and is 0.1030 for the worst //per source data error is 0.0215 on average and is 0.0944 for the worst
+epoch=1500, avg_loss=2.73e-03, kld=7.52, recon=1.71e-03(max=4.08e-03), time=5675.14
+eval in54.92075157165527 //coverage is 0.9370 on average and is 0.5975 for the worst //per sample error is 0.0363 on average and is 0.1092 for the worst //per source data error is 0.0209 on average and is 0.0713 for the worst
+epoch=1600, avg_loss=2.72e-03, kld=7.49, recon=1.70e-03(max=4.34e-03), time=6006.28
+eval in51.7370285987854 //coverage is 0.9369 on average and is 0.5656 for the worst //per sample error is 0.0339 on average and is 0.1022 for the worst //per source data error is 0.0202 on average and is 0.0778 for the worst
+epoch=1700, avg_loss=2.70e-03, kld=7.57, recon=1.68e-03(max=7.82e-03), time=6330.41
+eval in56.25011229515076 //coverage is 0.9390 on average and is 0.6000 for the worst //per sample error is 0.0367 on average and is 0.1099 for the worst //per source data error is 0.0205 on average and is 0.0659 for the worst
+epoch=1800, avg_loss=2.69e-03, kld=7.53, recon=1.67e-03(max=6.21e-03), time=6657.53
+eval in57.83227252960205 //coverage is 0.9357 on average and is 0.5645 for the worst //per sample error is 0.0357 on average and is 0.1050 for the worst //per source data error is 0.0208 on average and is 0.0925 for the worst
+epoch=1900, avg_loss=2.68e-03, kld=7.56, recon=1.66e-03(max=4.26e-03), time=6996.00
+eval in59.7713041305542 //coverage is 0.9394 on average and is 0.6153 for the worst //per sample error is 0.0349 on average and is 0.0944 for the worst //per source data error is 0.0204 on average and is 0.0672 for the worst
+epoch=2000, avg_loss=2.66e-03, kld=22.81, recon=1.30e-03(max=3.16e-03), time=7336.68
+eval in541.4120759963989 //coverage is 0.9942 on average and is 0.8887 for the worst //per sample error is 0.0352 on average and is 0.0991 for the worst //per source data error is 0.0144 on average and is 0.0387 for the worst
+epoch=2100, avg_loss=1.25e-03, kld=245.43, recon=9.94e-04(max=5.33e-03), time=8172.63
+eval in47.63085055351257 //coverage is 0.9218 on average and is 0.5537 for the worst //per sample error is 0.0383 on average and is 0.0937 for the worst //per source data error is 0.0249 on average and is 0.0988 for the worst
+save model
+epoch=2200, avg_loss=1.32e-03, kld=25.97, recon=1.01e-03(max=3.37e-03), time=8487.49
+eval in68.17963862419128 //coverage is 0.9264 on average and is 0.5926 for the worst //per sample error is 0.0360 on average and is 0.0965 for the worst //per source data error is 0.0224 on average and is 0.1093 for the worst
+epoch=2300, avg_loss=1.54e-03, kld=21.03, recon=1.06e-03(max=3.97e-03), time=8833.66
+eval in49.39850902557373 //coverage is 0.9367 on average and is 0.6215 for the worst //per sample error is 0.0381 on average and is 0.1004 for the worst //per source data error is 0.0220 on average and is 0.0788 for the worst
+epoch=2400, avg_loss=1.74e-03, kld=17.96, recon=1.12e-03(max=6.66e-03), time=9151.81
+eval in50.952213764190674 //coverage is 0.9274 on average and is 0.5916 for the worst //per sample error is 0.0384 on average and is 0.1082 for the worst //per source data error is 0.0227 on average and is 0.0869 for the worst
+epoch=2500, avg_loss=1.91e-03, kld=15.63, recon=1.18e-03(max=3.18e-03), time=9473.42
+eval in44.001099586486816 //coverage is 0.9426 on average and is 0.5782 for the worst //per sample error is 0.0407 on average and is 0.1111 for the worst //per source data error is 0.0224 on average and is 0.0782 for the worst
+epoch=2600, avg_loss=2.07e-03, kld=13.74, recon=1.26e-03(max=4.91e-03), time=9785.78
+eval in46.46327614784241 //coverage is 0.9355 on average and is 0.5801 for the worst //per sample error is 0.0364 on average and is 0.1027 for the worst //per source data error is 0.0216 on average and is 0.0871 for the worst
+epoch=2700, avg_loss=2.20e-03, kld=12.17, recon=1.33e-03(max=3.78e-03), time=10088.17
+eval in44.62955379486084 //coverage is 0.9399 on average and is 0.6207 for the worst //per sample error is 0.0394 on average and is 0.1129 for the worst //per source data error is 0.0218 on average and is 0.0915 for the worst
+epoch=2800, avg_loss=2.32e-03, kld=10.78, recon=1.40e-03(max=3.11e-03), time=10394.65
+eval in43.295201539993286 //coverage is 0.9462 on average and is 0.6388 for the worst //per sample error is 0.0363 on average and is 0.1051 for the worst //per source data error is 0.0206 on average and is 0.0774 for the worst
+epoch=2900, avg_loss=2.42e-03, kld=9.68, recon=1.47e-03(max=6.28e-03), time=10695.15
+eval in45.97430372238159 //coverage is 0.9411 on average and is 0.6249 for the worst //per sample error is 0.0365 on average and is 0.1002 for the worst //per source data error is 0.0208 on average and is 0.0644 for the worst
+epoch=3000, avg_loss=2.51e-03, kld=8.70, recon=1.53e-03(max=5.25e-03), time=10999.97
+eval in392.82248878479004 //coverage is 0.9937 on average and is 0.8750 for the worst //per sample error is 0.0358 on average and is 0.1102 for the worst //per source data error is 0.0145 on average and is 0.0354 for the worst
+epoch=3100, avg_loss=2.59e-03, kld=8.08, recon=1.58e-03(max=5.44e-03), time=11669.89
+eval in45.95658349990845 //coverage is 0.9434 on average and is 0.5923 for the worst //per sample error is 0.0354 on average and is 0.1104 for the worst //per source data error is 0.0207 on average and is 0.0785 for the worst
+epoch=3200, avg_loss=2.63e-03, kld=8.10, recon=1.57e-03(max=6.62e-03), time=11995.76
+eval in45.265450954437256 //coverage is 0.9351 on average and is 0.6000 for the worst //per sample error is 0.0367 on average and is 0.1069 for the worst //per source data error is 0.0210 on average and is 0.0783 for the worst
+epoch=3300, avg_loss=2.62e-03, kld=8.05, recon=1.57e-03(max=3.23e-03), time=12298.05
+eval in47.72506141662598 //coverage is 0.9327 on average and is 0.5901 for the worst //per sample error is 0.0373 on average and is 0.1050 for the worst //per source data error is 0.0209 on average and is 0.0818 for the worst
+epoch=3400, avg_loss=2.62e-03, kld=8.08, recon=1.56e-03(max=8.91e-03), time=12599.40
+eval in46.55010533332825 //coverage is 0.9364 on average and is 0.5846 for the worst //per sample error is 0.0357 on average and is 0.1092 for the worst //per source data error is 0.0210 on average and is 0.0873 for the worst
+epoch=3500, avg_loss=2.61e-03, kld=8.02, recon=1.56e-03(max=5.15e-03), time=12922.90
+eval in45.83193111419678 //coverage is 0.9379 on average and is 0.5852 for the worst //per sample error is 0.0362 on average and is 0.1146 for the worst //per source data error is 0.0202 on average and is 0.0742 for the worst
+epoch=3600, avg_loss=2.61e-03, kld=8.00, recon=1.56e-03(max=3.24e-03), time=13248.67
+eval in47.130032777786255 //coverage is 0.9370 on average and is 0.5678 for the worst //per sample error is 0.0353 on average and is 0.1024 for the worst //per source data error is 0.0201 on average and is 0.0656 for the worst
+epoch=3700, avg_loss=2.60e-03, kld=8.01, recon=1.56e-03(max=4.39e-03), time=13550.96
+eval in47.3081636428833 //coverage is 0.9362 on average and is 0.6027 for the worst //per sample error is 0.0359 on average and is 0.1038 for the worst //per source data error is 0.0205 on average and is 0.0649 for the worst
+epoch=3800, avg_loss=2.60e-03, kld=7.98, recon=1.55e-03(max=7.22e-03), time=13852.23
+eval in49.847383975982666 //coverage is 0.9348 on average and is 0.5367 for the worst //per sample error is 0.0340 on average and is 0.0963 for the worst //per source data error is 0.0199 on average and is 0.0603 for the worst
+epoch=3900, avg_loss=2.59e-03, kld=7.99, recon=1.55e-03(max=3.81e-03), time=14155.58
+eval in49.83654427528381 //coverage is 0.9284 on average and is 0.6200 for the worst //per sample error is 0.0346 on average and is 0.0974 for the worst //per source data error is 0.0204 on average and is 0.0632 for the worst
+epoch=4000, avg_loss=2.58e-03, kld=23.17, recon=1.20e-03(max=4.67e-03), time=14460.24
+eval in420.0907566547394 //coverage is 0.9941 on average and is 0.8947 for the worst //per sample error is 0.0352 on average and is 0.1015 for the worst //per source data error is 0.0139 on average and is 0.0379 for the worst
+epoch=4100, avg_loss=1.09e-03, kld=245.43, recon=8.75e-04(max=3.28e-03), time=15109.79
+eval in35.60336232185364 //coverage is 0.9261 on average and is 0.5688 for the worst //per sample error is 0.0396 on average and is 0.1152 for the worst //per source data error is 0.0236 on average and is 0.0938 for the worst
+save model
+epoch=4200, avg_loss=1.20e-03, kld=26.30, recon=9.19e-04(max=4.19e-03), time=15377.92
+eval in39.475027084350586 //coverage is 0.9251 on average and is 0.6049 for the worst //per sample error is 0.0361 on average and is 0.1059 for the worst //per source data error is 0.0231 on average and is 0.1373 for the worst
+epoch=4300, avg_loss=1.45e-03, kld=21.32, recon=9.79e-04(max=3.89e-03), time=15643.31
+eval in36.452128887176514 //coverage is 0.9372 on average and is 0.6066 for the worst //per sample error is 0.0367 on average and is 0.1020 for the worst //per source data error is 0.0224 on average and is 0.1029 for the worst
+epoch=4400, avg_loss=1.66e-03, kld=18.11, recon=1.05e-03(max=3.74e-03), time=15906.94
+eval in35.85805106163025 //coverage is 0.9394 on average and is 0.6172 for the worst //per sample error is 0.0363 on average and is 0.1087 for the worst //per source data error is 0.0222 on average and is 0.1109 for the worst
+epoch=4500, avg_loss=1.84e-03, kld=15.75, recon=1.12e-03(max=5.87e-03), time=16174.87
+eval in35.88037824630737 //coverage is 0.9425 on average and is 0.6048 for the worst //per sample error is 0.0380 on average and is 0.1062 for the worst //per source data error is 0.0212 on average and is 0.0649 for the worst
+epoch=4600, avg_loss=2.00e-03, kld=13.82, recon=1.20e-03(max=3.07e-03), time=16439.46
+eval in38.238556146621704 //coverage is 0.9360 on average and is 0.6056 for the worst //per sample error is 0.0357 on average and is 0.1030 for the worst //per source data error is 0.0220 on average and is 0.0922 for the worst
+epoch=4700, avg_loss=2.14e-03, kld=12.13, recon=1.28e-03(max=2.95e-03), time=16712.26
+eval in35.344024896621704 //coverage is 0.9361 on average and is 0.6000 for the worst //per sample error is 0.0392 on average and is 0.1131 for the worst //per source data error is 0.0219 on average and is 0.0846 for the worst
+epoch=4800, avg_loss=2.26e-03, kld=10.78, recon=1.35e-03(max=3.25e-03), time=16981.23
+eval in38.669190406799316 //coverage is 0.9336 on average and is 0.5607 for the worst //per sample error is 0.0368 on average and is 0.1078 for the worst //per source data error is 0.0208 on average and is 0.0718 for the worst
+epoch=4900, avg_loss=2.36e-03, kld=9.67, recon=1.41e-03(max=6.89e-03), time=17249.11
+eval in35.22105431556702 //coverage is 0.9421 on average and is 0.6134 for the worst //per sample error is 0.0365 on average and is 0.1058 for the worst //per source data error is 0.0207 on average and is 0.0675 for the worst
+epoch=5000, avg_loss=2.45e-03, kld=9.01, recon=1.46e-03(max=4.39e-03), time=17523.12
+eval in306.8681604862213 //coverage is 0.9950 on average and is 0.8999 for the worst //per sample error is 0.0357 on average and is 0.1043 for the worst //per source data error is 0.0138 on average and is 0.0325 for the worst
+epoch=5100, avg_loss=2.54e-03, kld=8.36, recon=1.51e-03(max=4.25e-03), time=18068.76
+eval in32.53764009475708 //coverage is 0.9446 on average and is 0.5970 for the worst //per sample error is 0.0364 on average and is 0.1006 for the worst //per source data error is 0.0200 on average and is 0.0713 for the worst
+epoch=5200, avg_loss=2.58e-03, kld=8.28, recon=1.51e-03(max=5.31e-03), time=18338.79
+eval in37.19365215301514 //coverage is 0.9343 on average and is 0.6132 for the worst //per sample error is 0.0361 on average and is 0.1084 for the worst //per source data error is 0.0205 on average and is 0.0689 for the worst
+epoch=5300, avg_loss=2.58e-03, kld=8.31, recon=1.51e-03(max=1.64e-02), time=18614.43
+eval in35.90124845504761 //coverage is 0.9353 on average and is 0.6071 for the worst //per sample error is 0.0360 on average and is 0.1117 for the worst //per source data error is 0.0201 on average and is 0.0679 for the worst
+epoch=5400, avg_loss=2.57e-03, kld=8.24, recon=1.51e-03(max=3.33e-03), time=18878.25
+eval in36.279014348983765 //coverage is 0.9384 on average and is 0.6162 for the worst //per sample error is 0.0350 on average and is 0.1003 for the worst //per source data error is 0.0198 on average and is 0.0685 for the worst
+epoch=5500, avg_loss=2.57e-03, kld=8.20, recon=1.51e-03(max=5.17e-03), time=19151.02
+eval in36.22557497024536 //coverage is 0.9375 on average and is 0.6049 for the worst //per sample error is 0.0348 on average and is 0.1106 for the worst //per source data error is 0.0201 on average and is 0.0711 for the worst
+epoch=5600, avg_loss=2.57e-03, kld=8.26, recon=1.52e-03(max=2.33e-02), time=19417.00
+eval in38.941224098205566 //coverage is 0.9340 on average and is 0.5670 for the worst //per sample error is 0.0355 on average and is 0.1069 for the worst //per source data error is 0.0200 on average and is 0.0743 for the worst
+epoch=5700, avg_loss=2.57e-03, kld=8.17, recon=1.51e-03(max=3.28e-03), time=19698.75
+eval in36.065346002578735 //coverage is 0.9388 on average and is 0.5612 for the worst //per sample error is 0.0365 on average and is 0.1092 for the worst //per source data error is 0.0204 on average and is 0.0747 for the worst
+epoch=5800, avg_loss=2.57e-03, kld=8.18, recon=1.51e-03(max=3.53e-03), time=19983.42
+eval in35.41817808151245 //coverage is 0.9401 on average and is 0.6164 for the worst //per sample error is 0.0357 on average and is 0.1022 for the worst //per source data error is 0.0200 on average and is 0.0696 for the worst
+epoch=5900, avg_loss=2.56e-03, kld=8.19, recon=1.51e-03(max=3.74e-03), time=20249.32
+eval in37.11574602127075 //coverage is 0.9359 on average and is 0.5555 for the worst //per sample error is 0.0347 on average and is 0.1083 for the worst //per source data error is 0.0204 on average and is 0.0854 for the worst
+epoch=6000, avg_loss=2.55e-03, kld=24.70, recon=1.15e-03(max=3.02e-03), time=20521.79
+eval in299.3261821269989 //coverage is 0.9950 on average and is 0.9090 for the worst //per sample error is 0.0365 on average and is 0.1059 for the worst //per source data error is 0.0133 on average and is 0.0331 for the worst
+epoch=6100, avg_loss=1.05e-03, kld=254.09, recon=8.42e-04(max=7.44e-03), time=21051.01
+eval in32.028385400772095 //coverage is 0.9346 on average and is 0.6101 for the worst //per sample error is 0.0363 on average and is 0.0966 for the worst //per source data error is 0.0224 on average and is 0.0926 for the worst
+save model
+epoch=6200, avg_loss=1.17e-03, kld=26.88, recon=8.85e-04(max=4.66e-03), time=21317.59
+eval in35.47496557235718 //coverage is 0.9294 on average and is 0.5840 for the worst //per sample error is 0.0387 on average and is 0.1059 for the worst //per source data error is 0.0235 on average and is 0.1091 for the worst
+epoch=6300, avg_loss=1.42e-03, kld=21.59, recon=9.57e-04(max=9.10e-03), time=21588.93
+eval in35.90010046958923 //coverage is 0.9383 on average and is 0.5936 for the worst //per sample error is 0.0398 on average and is 0.1125 for the worst //per source data error is 0.0231 on average and is 0.1211 for the worst
+epoch=6400, avg_loss=1.63e-03, kld=18.17, recon=1.02e-03(max=3.62e-03), time=21871.22
+eval in34.518967390060425 //coverage is 0.9439 on average and is 0.6329 for the worst //per sample error is 0.0390 on average and is 0.1103 for the worst //per source data error is 0.0220 on average and is 0.0843 for the worst
+epoch=6500, avg_loss=1.81e-03, kld=15.73, recon=1.10e-03(max=2.86e-03), time=22135.32
+eval in38.01221537590027 //coverage is 0.9387 on average and is 0.6142 for the worst //per sample error is 0.0373 on average and is 0.1090 for the worst //per source data error is 0.0215 on average and is 0.0819 for the worst
+epoch=6600, avg_loss=1.97e-03, kld=13.76, recon=1.18e-03(max=4.34e-03), time=22398.76
+eval in34.90581727027893 //coverage is 0.9446 on average and is 0.6096 for the worst //per sample error is 0.0356 on average and is 0.1009 for the worst //per source data error is 0.0211 on average and is 0.0675 for the worst
+epoch=6700, avg_loss=2.11e-03, kld=12.09, recon=1.25e-03(max=2.53e-03), time=22652.55
+eval in36.31752347946167 //coverage is 0.9370 on average and is 0.5647 for the worst //per sample error is 0.0367 on average and is 0.1069 for the worst //per source data error is 0.0213 on average and is 0.0627 for the worst
+epoch=6800, avg_loss=2.23e-03, kld=10.71, recon=1.33e-03(max=4.05e-03), time=22894.26
+eval in37.66816186904907 //coverage is 0.9361 on average and is 0.6175 for the worst //per sample error is 0.0367 on average and is 0.1029 for the worst //per source data error is 0.0210 on average and is 0.0646 for the worst
+epoch=6900, avg_loss=1.03e+00, kld=9.82, recon=1.38e-03(max=6.25e-03), time=23158.84
+eval in32.55648136138916 //coverage is 0.9505 on average and is 0.6172 for the worst //per sample error is 0.0366 on average and is 0.1022 for the worst //per source data error is 0.0196 on average and is 0.0620 for the worst
+epoch=7000, avg_loss=2.10e+00, kld=9.12, recon=1.43e-03(max=4.07e-03), time=23426.50
+eval in335.59076476097107 //coverage is 0.9947 on average and is 0.9332 for the worst //per sample error is 0.0353 on average and is 0.0951 for the worst //per source data error is 0.0144 on average and is 0.0353 for the worst
+epoch=7100, avg_loss=2.53e-03, kld=8.49, recon=1.49e-03(max=4.11e-03), time=23985.10
+eval in37.63839936256409 //coverage is 0.9372 on average and is 0.6212 for the worst //per sample error is 0.0346 on average and is 0.1007 for the worst //per source data error is 0.0201 on average and is 0.0824 for the worst
+epoch=7200, avg_loss=1.88e+01, kld=8.56, recon=1.48e-03(max=2.90e-02), time=24244.98
+eval in31.776005029678345 //coverage is 0.9481 on average and is 0.6245 for the worst //per sample error is 0.0350 on average and is 0.1000 for the worst //per source data error is 0.0200 on average and is 0.0760 for the worst
+epoch=7300, avg_loss=3.34e+08, kld=8.41, recon=1.49e-03(max=6.29e-03), time=24499.36
+eval in32.29947566986084 //coverage is 0.9486 on average and is 0.6071 for the worst //per sample error is 0.0367 on average and is 0.1111 for the worst //per source data error is 0.0198 on average and is 0.0610 for the worst
+epoch=7400, avg_loss=3.45e+26, kld=37764239934863621969519436627968.00, recon=1.49e-03(max=2.80e-02), time=24754.51
+eval in47.72788453102112 //coverage is 0.9337 on average and is 0.5960 for the worst //per sample error is 0.0355 on average and is 0.1082 for the worst //per source data error is 0.0200 on average and is 0.0658 for the worst
+epoch=7500, avg_loss=3.70e+28, kld=194312215227670226884267499061248.00, recon=1.49e-03(max=3.08e-02), time=25029.99
+eval in34.73803162574768 //coverage is 0.9385 on average and is 0.6164 for the worst //per sample error is 0.0352 on average and is 0.1036 for the worst //per source data error is 0.0203 on average and is 0.0812 for the worst
+epoch=7600, avg_loss=4.03e+28, kld=136509109891597273453644113510400.00, recon=1.49e-03(max=6.02e-03), time=25290.68
+eval in34.41587543487549 //coverage is 0.9414 on average and is 0.6000 for the worst //per sample error is 0.0371 on average and is 0.1077 for the worst //per source data error is 0.0209 on average and is 0.0643 for the worst
+epoch=7700, avg_loss=1.59e+28, kld=153893619517103202526825889660928.00, recon=1.48e-03(max=8.35e-03), time=25546.20
+eval in37.12340307235718 //coverage is 0.9372 on average and is 0.6281 for the worst //per sample error is 0.0369 on average and is 0.1095 for the worst //per source data error is 0.0202 on average and is 0.0876 for the worst
+epoch=7800, avg_loss=1.75e+28, kld=196458411076386630038364664889344.00, recon=1.49e-03(max=2.80e-02), time=25834.88
+eval in33.6948037147522 //coverage is 0.9403 on average and is 0.6363 for the worst //per sample error is 0.0356 on average and is 0.1036 for the worst //per source data error is 0.0206 on average and is 0.0630 for the worst
+epoch=7900, avg_loss=2.66e+28, kld=283147356551306197869202988072960.00, recon=1.49e-03(max=2.80e-02), time=26084.87
+eval in34.32579278945923 //coverage is 0.9443 on average and is 0.6336 for the worst //per sample error is 0.0355 on average and is 0.1097 for the worst //per source data error is 0.0195 on average and is 0.0628 for the worst
+epoch=8000, avg_loss=4.64e+28, kld=476668316950819931874760207630336.00, recon=1.14e-03(max=3.93e-03), time=26343.35
+eval in298.4221110343933 //coverage is 0.9943 on average and is 0.8746 for the worst //per sample error is 0.0357 on average and is 0.1091 for the worst //per source data error is 0.0136 on average and is 0.0331 for the worst
+epoch=8100, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=26872.65
+eval in35.44028162956238 //coverage is 0.2846 on average and is 0.0115 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=27130.42
+eval in34.04525303840637 //coverage is 0.3090 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=27386.53
+eval in37.150832176208496 //coverage is 0.2797 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8400, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=27650.98
+eval in36.25470423698425 //coverage is 0.2870 on average and is 0.0122 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8500, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=27913.71
+eval in37.68714761734009 //coverage is 0.2840 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8600, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=28172.36
+eval in47.43137812614441 //coverage is 0.2784 on average and is 0.0133 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8700, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=28476.74
+eval in33.863036155700684 //coverage is 0.3229 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8800, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=28733.13
+eval in47.563958406448364 //coverage is 0.2931 on average and is 0.0122 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=8900, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=29016.65
+eval in35.09377956390381 //coverage is 0.2896 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=9000, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=29269.18
+eval in297.6145873069763 //coverage is 0.3087 on average and is 0.0139 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=9100, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=29800.01
+eval in34.186301708221436 //coverage is 0.3110 on average and is 0.0130 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=9200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=30058.32
+eval in37.534708976745605 //coverage is 0.2946 on average and is 0.0112 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst
+epoch=9300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=30314.75
+eval in36.99501299858093 //coverage is 0.2946 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst //per source data error is nan on average and is nan for the worst

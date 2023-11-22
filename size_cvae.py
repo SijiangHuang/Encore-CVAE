@@ -142,10 +142,10 @@ def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, 
         # plt.savefig('result/{date}/'.format(date=date)+str(step)+".png")
 
         # print("coverage for testsize "+str(test_size)+" is :"+str(len(row_posi)/test_size))
-        print("eval in"+str(time.time()-t0)+" //coverage is %.2f on average and is %.2f for the worst" %
+        print("eval in"+str(time.time()-t0)+" //coverage is %.4f on average and is %.4f for the worst" %
               (np.mean(coverage), np.percentile(coverage,1)) +
-              " //per sample error is %.2f on average and is %.2f for the worst" %(np.mean(r_min_aver),np.percentile(r_min_95,95)) +
-              " //per source data error is %.2f on average and is %.2f for the worst" %(np.mean(c_min_aver),np.percentile(c_min_95,95)))
+              " //per sample error is %.4f on average and is %.4f for the worst" %(np.mean(r_min_aver),np.percentile(r_min_95,95)) +
+              " //per source data error is %.4f on average and is %.4f for the worst" %(np.mean(c_min_aver),np.percentile(c_min_95,95)))
         # plt.close()
 
 
@@ -186,6 +186,16 @@ def get_locality(pairdata, freqpairs,pairsize):
 
     return locality_strings, np.array(locality_onehots), pair_counts, condition_size, locality_onehots_dict
 
+def get_kld_weight(epoch=0):
+    kld_max=1e-4
+    kld_min=0.0
+    epoch%=2000
+    if epoch<100:
+        return kld_min
+    elif epoch<1100:
+        return (kld_max-kld_min)*((epoch-100)/1000.0)+kld_min
+    else:
+        return kld_max
 
 if __name__ == "__main__":
     t0 = time.time()
@@ -234,6 +244,7 @@ if __name__ == "__main__":
     min_loss = 1e9
     print_every = 100
     for epoch in range(100001):
+        kld_weight = get_kld_weight(epoch)
         epoch_loss, epoch_recon, epoch_kld, max_loss = train(encoder, decoder, dataset, optimizer)
         avg_loss += epoch_loss
         if epoch and epoch % print_every == 0:
