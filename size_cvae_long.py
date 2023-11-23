@@ -191,8 +191,10 @@ def get_kld_weight(epoch=0):
     kld_min=1e-6
     if epoch<1000:
         return (kld_max-kld_min)*((epoch)/1000.0)+kld_min
-    else:
+    elif epoch<6000:
         return kld_max
+    else:
+        return 1e-3
 
 if __name__ == "__main__":
     t0 = time.time()
@@ -219,9 +221,6 @@ if __name__ == "__main__":
     # print('encoder:', summary(encoder, [[n_size], [condition_size]], device=device))
     # print('decoder:', summary(decoder, [[latent_dim], [condition_size]], device=device))
     sys.stdout.flush()
-    
-    encoder = torch.load('model/2023-11-23-2/encoder7300.pth')
-    decoder = torch.load('model/2023-11-22-7/decoder7300.pth')
 
     lr = 1e-4
     kld_weight = 1e-4#1e-4不行
@@ -239,20 +238,21 @@ if __name__ == "__main__":
         os.system('rm -r result/{date}/'.format(date=date))
     os.makedirs('result/{date}/'.format(date=date))
     
-
+    # encoder = torch.load('model/2023-11-22-7/encoder7300.pth')
+    # decoder = torch.load('model/2023-11-22-7/decoder7300.pth')
     
     start_time = time.time()
     avg_loss = 0
     min_loss = 1e9
     print_every = 100
     for epoch in range(100001):
-        # kld_weight = get_kld_weight(epoch)
+        kld_weight = get_kld_weight(epoch)
         epoch_loss, epoch_recon, epoch_kld, max_loss = train(encoder, decoder, dataset, optimizer)
         avg_loss += epoch_loss
         if epoch and epoch % print_every == 0:
             avg_loss /= print_every
             cur_time = time.time()
-            print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time))
+            print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f, kld_weight=%.4f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time,kld_weight))
             if epoch % (print_every*10) == 0:
                 evaluate(decoder,sizedata,locality_onehots,latent_dim,locality_onehots_dict,epoch,1000)
             else:
