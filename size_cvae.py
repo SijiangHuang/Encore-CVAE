@@ -90,7 +90,7 @@ def train(encoder, decoder, dataset, optimizer):
         recon_loss = F.l1_loss(y, size_data)
         max_recon_loss = torch.max(torch.abs(y - size_data).mean(dim=1))
         kld_loss = torch.mean(-0.5 * torch.sum(1 + var - mu ** 2 - var.exp(), dim = 1), dim = 0)
-        loss = recon_loss + max_loss_weight * max_recon_loss + kld_weight * kld_loss
+        loss = recon_loss  + kld_weight * kld_loss #+ max_loss_weight * max_recon_loss
         loss.backward()
         optimizer.step()
         epoch_loss += loss.item() * len(size_data)
@@ -220,8 +220,8 @@ if __name__ == "__main__":
     # print('decoder:', summary(decoder, [[latent_dim], [condition_size]], device=device))
     sys.stdout.flush()
     
-    encoder = torch.load('model/2023-11-23-2/encoder7300.pth')
-    decoder = torch.load('model/2023-11-22-7/decoder7300.pth')
+    encoder = torch.load('model/2023-11-23-7/encoder2.pth')
+    decoder = torch.load('model/2023-11-23-7/decoder2.pth')
 
     lr = 1e-4
     kld_weight = 1e-4#1e-4不行
