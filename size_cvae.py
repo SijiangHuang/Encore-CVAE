@@ -91,13 +91,14 @@ def train(encoder, decoder, dataset, optimizer):
         max_recon_loss = torch.max(torch.abs(y - size_data).mean(dim=1))
         kld_loss = torch.mean(-0.5 * torch.sum(1 + var - mu ** 2 - var.exp(), dim = 1), dim = 0)
         loss = recon_loss  + kld_weight * kld_loss #+ max_loss_weight * max_recon_loss
-        loss.backward()
-        optimizer.step()
-        epoch_loss += loss.item() * len(size_data)
-        epoch_kld += kld_loss.item() * len(size_data)
-        epoch_recon += recon_loss.item() * len(size_data)
-        epoch_max_loss = max(epoch_max_loss, max_recon_loss.item())
-        sample_num += len(size_data)
+        if kld_loss.item() < 99:
+            loss.backward()
+            optimizer.step()
+            epoch_loss += loss.item() * len(size_data)
+            epoch_kld += kld_loss.item() * len(size_data)
+            epoch_recon += recon_loss.item() * len(size_data)
+            epoch_max_loss = max(epoch_max_loss, max_recon_loss.item())
+            sample_num += len(size_data)
 
     epoch_loss /= sample_num
     epoch_recon /= sample_num
