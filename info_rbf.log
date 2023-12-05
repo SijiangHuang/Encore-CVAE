@@ -1,0 +1,383 @@
+read data in 5m 14s
+maxsrccount106maxdstcount129
+get locality in 5m 29s
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                  [-1, 768]         232,704
+              ReLU-2                  [-1, 768]               0
+            Linear-3                  [-1, 512]         393,728
+              ReLU-4                  [-1, 512]               0
+            Linear-5                  [-1, 256]         131,328
+              ReLU-6                  [-1, 256]               0
+            Linear-7                  [-1, 128]          32,896
+              ReLU-8                  [-1, 128]               0
+            Linear-9                   [-1, 64]           8,256
+           Linear-10                   [-1, 64]           8,256
+================================================================
+Total params: 807,168
+Trainable params: 807,168
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.06
+Forward/backward pass size (MB): 0.03
+Params size (MB): 3.08
+Estimated Total Size (MB): 3.16
+----------------------------------------------------------------
+encoder: None
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                  [-1, 128]          38,656
+              ReLU-2                  [-1, 128]               0
+            Linear-3                  [-1, 256]          33,024
+              ReLU-4                  [-1, 256]               0
+            Linear-5                  [-1, 512]         131,584
+              ReLU-6                  [-1, 512]               0
+            Linear-7                  [-1, 768]         393,984
+              ReLU-8                  [-1, 768]               0
+            Linear-9                   [-1, 65]          49,985
+================================================================
+Total params: 647,233
+Trainable params: 647,233
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.06
+Forward/backward pass size (MB): 0.03
+Params size (MB): 2.47
+Estimated Total Size (MB): 2.55
+----------------------------------------------------------------
+decoder: None
+start in: 2023/12/04 02:34:58
+/root/Encore-CVAE/size_cvae.py:192: DeprecationWarning: Sampling from a set deprecated
+since Python 3.9 and will be removed in a subsequent version.
+  condition = random.sample(locality_onehots_dict.keys(),min(len(locality_onehots_dict.keys()),500))
+epoch=100, avg_loss=3.26e-03, kld=21.42, recon=2.18e-03(max=1.61e-02), time=363.58, avg_good=394.91, kld_weight=0.000003
+eval in49.34168100357056 //coverage is 0.8058 on average and is 0.1667 for the worst //per sample error is 0.0946 on average and is 0.3576 for the worst99 and is 0.2126 for the worst50 //per source data error is 0.0414 on average and is 0.3480 for the worst99 and is 0.0462 for the worst50
+save model
+epoch=200, avg_loss=2.34e-03, kld=18.80, recon=1.72e-03(max=1.17e-02), time=773.16, avg_good=391.00, kld_weight=0.000005
+eval in48.015116453170776 //coverage is 0.9073 on average and is 0.2492 for the worst //per sample error is 0.0734 on average and is 0.3422 for the worst99 and is 0.1939 for the worst50 //per source data error is 0.0334 on average and is 0.2637 for the worst99 and is 0.0383 for the worst50
+save model
+epoch=300, avg_loss=2.14e-03, kld=17.35, recon=1.66e-03(max=1.17e-02), time=1185.09, avg_good=391.00, kld_weight=0.000007
+eval in45.62290358543396 //coverage is 0.9180 on average and is 0.2272 for the worst //per sample error is 0.0656 on average and is 0.3442 for the worst99 and is 0.1762 for the worst50 //per source data error is 0.0314 on average and is 0.2525 for the worst99 and is 0.0329 for the worst50
+save model
+epoch=400, avg_loss=2.10e-03, kld=16.52, recon=1.64e-03(max=1.17e-02), time=1589.38, avg_good=391.00, kld_weight=0.000009
+eval in52.77367877960205 //coverage is 0.9130 on average and is 0.1304 for the worst //per sample error is 0.0564 on average and is 0.3297 for the worst99 and is 0.1378 for the worst50 //per source data error is 0.0307 on average and is 0.3299 for the worst99 and is 0.0335 for the worst50
+save model
+epoch=500, avg_loss=2.08e-03, kld=17.23, recon=1.58e-03(max=1.17e-02), time=2001.18, avg_good=391.00, kld_weight=0.000011
+eval in49.13967442512512 //coverage is 0.9191 on average and is 0.3328 for the worst //per sample error is 0.0532 on average and is 0.3666 for the worst99 and is 0.1088 for the worst50 //per source data error is 0.0282 on average and is 0.2930 for the worst99 and is 0.0310 for the worst50
+save model
+epoch=600, avg_loss=2.02e-03, kld=17.63, recon=1.50e-03(max=4.54e-03), time=2473.20, avg_good=391.00, kld_weight=0.000012
+eval in56.07297873497009 //coverage is 0.9249 on average and is 0.4999 for the worst //per sample error is 0.0482 on average and is 0.3398 for the worst99 and is 0.0964 for the worst50 //per source data error is 0.0258 on average and is 0.2446 for the worst99 and is 0.0335 for the worst50
+save model
+epoch=700, avg_loss=1.94e-03, kld=18.21, recon=1.42e-03(max=4.43e-03), time=2903.85, avg_good=391.00, kld_weight=0.000014
+eval in52.435343742370605 //coverage is 0.9262 on average and is 0.3743 for the worst //per sample error is 0.0495 on average and is 0.3194 for the worst99 and is 0.0976 for the worst50 //per source data error is 0.0273 on average and is 0.2694 for the worst99 and is 0.0323 for the worst50
+save model
+epoch=800, avg_loss=1.92e-03, kld=18.01, recon=1.39e-03(max=4.43e-03), time=3342.58, avg_good=391.00, kld_weight=0.000016
+eval in38.37113070487976 //coverage is 0.9368 on average and is 0.5352 for the worst //per sample error is 0.0480 on average and is 0.2995 for the worst99 and is 0.0968 for the worst50 //per source data error is 0.0253 on average and is 0.2559 for the worst99 and is 0.0310 for the worst50
+save model
+epoch=900, avg_loss=1.91e-03, kld=17.51, recon=1.38e-03(max=4.68e-03), time=3778.45, avg_good=391.00, kld_weight=0.000018
+eval in85.11137819290161 //coverage is 0.9339 on average and is 0.4901 for the worst //per sample error is 0.0516 on average and is 0.3501 for the worst99 and is 0.0956 for the worst50 //per source data error is 0.0249 on average and is 0.2585 for the worst99 and is 0.0299 for the worst50
+save model
+epoch=1000, avg_loss=1.92e-03, kld=17.05, recon=1.37e-03(max=4.44e-03), time=4333.41, avg_good=391.00, kld_weight=0.000020
+eval in589.6226832866669 //coverage is 0.9918 on average and is 0.8329 for the worst //per sample error is 0.0497 on average and is 0.3520 for the worst99 and is 0.0997 for the worst50 //per source data error is 0.0180 on average and is 0.1588 for the worst99 and is 0.0235 for the worst50
+epoch=1100, avg_loss=1.92e-03, kld=17.08, recon=1.35e-03(max=5.34e-03), time=5506.44, avg_good=391.00, kld_weight=0.000020
+eval in88.995854139328 //coverage is 0.9332 on average and is 0.5555 for the worst //per sample error is 0.0494 on average and is 0.3397 for the worst99 and is 0.0876 for the worst50 //per source data error is 0.0244 on average and is 0.2663 for the worst99 and is 0.0308 for the worst50
+epoch=1200, avg_loss=1.89e-03, kld=17.22, recon=1.33e-03(max=7.05e-03), time=6205.28, avg_good=391.00, kld_weight=0.000020
+eval in85.47265100479126 //coverage is 0.9372 on average and is 0.5999 for the worst //per sample error is 0.0482 on average and is 0.3350 for the worst99 and is 0.0870 for the worst50 //per source data error is 0.0245 on average and is 0.2355 for the worst99 and is 0.0305 for the worst50
+save model
+epoch=1300, avg_loss=1.87e-03, kld=17.33, recon=1.31e-03(max=3.71e-03), time=6839.48, avg_good=391.00, kld_weight=0.000020
+eval in94.00339150428772 //coverage is 0.9244 on average and is 0.5000 for the worst //per sample error is 0.0449 on average and is 0.3345 for the worst99 and is 0.0854 for the worst50 //per source data error is 0.0245 on average and is 0.2589 for the worst99 and is 0.0307 for the worst50
+save model
+epoch=1400, avg_loss=1.85e-03, kld=17.33, recon=1.30e-03(max=3.83e-03), time=7539.15, avg_good=391.00, kld_weight=0.000020
+eval in90.15249705314636 //coverage is 0.9262 on average and is 0.5381 for the worst //per sample error is 0.0445 on average and is 0.2967 for the worst99 and is 0.0861 for the worst50 //per source data error is 0.0239 on average and is 0.2995 for the worst99 and is 0.0329 for the worst50
+save model
+epoch=1500, avg_loss=1.83e-03, kld=17.46, recon=1.27e-03(max=4.37e-03), time=8130.39, avg_good=391.00, kld_weight=0.000020
+eval in50.05400323867798 //coverage is 0.9410 on average and is 0.5939 for the worst //per sample error is 0.0465 on average and is 0.3503 for the worst99 and is 0.0865 for the worst50 //per source data error is 0.0233 on average and is 0.2760 for the worst99 and is 0.0300 for the worst50
+save model
+epoch=1600, avg_loss=1.82e-03, kld=17.44, recon=1.27e-03(max=4.46e-03), time=8588.75, avg_good=391.00, kld_weight=0.000020
+eval in90.52774405479431 //coverage is 0.9386 on average and is 0.5714 for the worst //per sample error is 0.0433 on average and is 0.3189 for the worst99 and is 0.0845 for the worst50 //per source data error is 0.0228 on average and is 0.2376 for the worst99 and is 0.0297 for the worst50
+save model
+epoch=1700, avg_loss=1.80e-03, kld=17.64, recon=1.25e-03(max=9.75e-03), time=9407.06, avg_good=391.00, kld_weight=0.000020
+eval in69.02888226509094 //coverage is 0.9360 on average and is 0.5672 for the worst //per sample error is 0.0466 on average and is 0.3363 for the worst99 and is 0.0848 for the worst50 //per source data error is 0.0248 on average and is 0.3153 for the worst99 and is 0.0305 for the worst50
+save model
+epoch=1800, avg_loss=1.79e-03, kld=17.68, recon=1.24e-03(max=2.84e-03), time=9881.92, avg_good=391.00, kld_weight=0.000020
+eval in45.76111149787903 //coverage is 0.9335 on average and is 0.5464 for the worst //per sample error is 0.0460 on average and is 0.3343 for the worst99 and is 0.0866 for the worst50 //per source data error is 0.0239 on average and is 0.2671 for the worst99 and is 0.0294 for the worst50
+save model
+epoch=1900, avg_loss=1.78e-03, kld=17.72, recon=1.23e-03(max=3.07e-03), time=10473.51, avg_good=391.00, kld_weight=0.000020
+eval in47.21038460731506 //coverage is 0.9429 on average and is 0.6250 for the worst //per sample error is 0.0450 on average and is 0.3382 for the worst99 and is 0.0861 for the worst50 //per source data error is 0.0238 on average and is 0.2525 for the worst99 and is 0.0313 for the worst50
+save model
+epoch=2000, avg_loss=1.77e-03, kld=17.81, recon=1.21e-03(max=2.56e-03), time=10944.57, avg_good=391.00, kld_weight=0.000020
+eval in510.88309240341187 //coverage is 0.9919 on average and is 0.8746 for the worst //per sample error is 0.0436 on average and is 0.3371 for the worst99 and is 0.0896 for the worst50 //per source data error is 0.0166 on average and is 0.1532 for the worst99 and is 0.0219 for the worst50
+save mode
+ epoch=2100, avg_loss=1.76e-03, kld=17.87, recon=1.21e-03(max=3.98e-03), time=11815.92, avg_good=391.00, kld_weight=0.000020
+eval in36.91649079322815 //coverage is 0.9365 on average and is 0.5858 for the worst //per sample error is 0.0428 on average and is 0.3044 for the worst99 and is 0.0835 for the worst50 //per source data error is 0.0229 on average and is 0.2735 for the worst99 and is 0.0300 for the worst50
+save model
+epoch=2200, avg_loss=1.75e-03, kld=17.83, recon=1.20e-03(max=4.85e-03), time=12312.69, avg_good=391.00, kld_weight=0.000020
+eval in93.10956144332886 //coverage is 0.9308 on average and is 0.5974 for the worst //per sample error is 0.0430 on average and is 0.3095 for the worst99 and is 0.0833 for the worst50 //per source data error is 0.0233 on average and is 0.2618 for the worst99 and is 0.0317 for the worst50
+save model
+epoch=2300, avg_loss=1.73e-03, kld=17.95, recon=1.19e-03(max=4.08e-03), time=12846.08, avg_good=391.00, kld_weight=0.000020
+eval in50.278839111328125 //coverage is 0.9282 on average and is 0.5811 for the worst //per sample error is 0.0455 on average and is 0.3489 for the worst99 and is 0.0827 for the worst50 //per source data error is 0.0238 on average and is 0.2597 for the worst99 and is 0.0309 for the worst50
+save model
+epoch=2400, avg_loss=1.73e-03, kld=18.05, recon=1.18e-03(max=4.16e-03), time=13302.27, avg_good=391.00, kld_weight=0.000020
+eval in76.7210259437561 //coverage is 0.9245 on average and is 0.5640 for the worst //per sample error is 0.0454 on average and is 0.3365 for the worst99 and is 0.0816 for the worst50 //per source data error is 0.0239 on average and is 0.2432 for the worst99 and is 0.0318 for the worst50
+save model
+epoch=2500, avg_loss=1.72e-03, kld=18.09, recon=1.17e-03(max=3.61e-03), time=13819.50, avg_good=391.00, kld_weight=0.000020
+eval in47.78517746925354 //coverage is 0.9401 on average and is 0.5414 for the worst //per sample error is 0.0481 on average and is 0.3949 for the worst99 and is 0.0863 for the worst50 //per source data error is 0.0254 on average and is 0.2544 for the worst99 and is 0.0305 for the worst50
+save model
+epoch=2600, avg_loss=1.71e-03, kld=18.16, recon=1.16e-03(max=3.93e-03), time=14618.33, avg_good=391.00, kld_weight=0.000020
+eval in89.1520926952362 //coverage is 0.9336 on average and is 0.5789 for the worst //per sample error is 0.0439 on average and is 0.3477 for the worst99 and is 0.0838 for the worst50 //per source data error is 0.0234 on average and is 0.2659 for the worst99 and is 0.0301 for the worst50
+save model
+epoch=2700, avg_loss=1.70e-03, kld=18.16, recon=1.16e-03(max=5.60e-03), time=15242.79, avg_good=391.00, kld_weight=0.000020
+eval in75.0163643360138 //coverage is 0.9398 on average and is 0.6322 for the worst //per sample error is 0.0471 on average and is 0.3519 for the worst99 and is 0.0854 for the worst50 //per source data error is 0.0248 on average and is 0.2802 for the worst99 and is 0.0301 for the worst50
+save model
+epoch=2800, avg_loss=1.70e-03, kld=18.12, recon=1.16e-03(max=3.36e-03), time=15961.19, avg_good=391.00, kld_weight=0.000020
+eval in164.122220993042 //coverage is 0.9423 on average and is 0.5862 for the worst //per sample error is 0.0443 on average and is 0.3368 for the worst99 and is 0.0853 for the worst50 //per source data error is 0.0232 on average and is 0.2513 for the worst99 and is 0.0301 for the worst50
+save model
+epoch=2900, avg_loss=1.69e-03, kld=18.27, recon=1.15e-03(max=4.51e-03), time=17259.63, avg_good=391.00, kld_weight=0.000020
+eval in143.25728297233582 //coverage is 0.9356 on average and is 0.5645 for the worst //per sample error is 0.0439 on average and is 0.3319 for the worst99 and is 0.0829 for the worst50 //per source data error is 0.0238 on average and is 0.2716 for the worst99 and is 0.0308 for the worst50
+save model
+epoch=3000, avg_loss=1.69e-03, kld=18.26, recon=1.14e-03(max=2.63e-03), time=18049.98, avg_good=391.00, kld_weight=0.000020
+eval in739.4735627174377 //coverage is 0.9942 on average and is 0.9090 for the worst //per sample error is 0.0427 on average and is 0.3068 for the worst99 and is 0.0875 for the worst50 //per source data error is 0.0162 on average and is 0.1511 for the worst99 and is 0.0223 for the worst50
+save model
+epoch=3100, avg_loss=1.68e-03, kld=18.34, recon=1.13e-03(max=2.52e-03), time=19425.46, avg_good=391.00, kld_weight=0.000020
+eval in104.12981414794922 //coverage is 0.9382 on average and is 0.5965 for the worst //per sample error is 0.0432 on average and is 0.3099 for the worst99 and is 0.0824 for the worst50 //per source data error is 0.0233 on average and is 0.2593 for the worst99 and is 0.0306 for the worst50
+save model
+epoch=3200, avg_loss=1.67e-03, kld=18.28, recon=1.13e-03(max=3.51e-03), time=20199.98, avg_good=391.00, kld_weight=0.000020
+eval in98.13442873954773 //coverage is 0.9371 on average and is 0.5789 for the worst //per sample error is 0.0447 on average and is 0.3673 for the worst99 and is 0.0853 for the worst50 //per source data error is 0.0238 on average and is 0.2480 for the worst99 and is 0.0305 for the worst50
+save model
+epoch=3300, avg_loss=1.67e-03, kld=18.45, recon=1.12e-03(max=2.52e-03), time=20978.06, avg_good=391.00, kld_weight=0.000020
+eval in105.16556024551392 //coverage is 0.9293 on average and is 0.5797 for the worst //per sample error is 0.0454 on average and is 0.3706 for the worst99 and is 0.0826 for the worst50 //per source data error is 0.0242 on average and is 0.2585 for the worst99 and is 0.0308 for the worst50
+save model
+epoch=3400, avg_loss=1.66e-03, kld=18.39, recon=1.12e-03(max=3.12e-03), time=21920.07, avg_good=391.00, kld_weight=0.000020
+eval in101.60046696662903 //coverage is 0.9324 on average and is 0.5899 for the worst //per sample error is 0.0443 on average and is 0.3811 for the worst99 and is 0.0821 for the worst50 //per source data error is 0.0236 on average and is 0.2635 for the worst99 and is 0.0310 for the worst50
+save model
+epoch=3500, avg_loss=1.66e-03, kld=18.38, recon=1.12e-03(max=6.74e-03), time=22813.82, avg_good=391.00, kld_weight=0.000020
+eval in122.22054171562195 //coverage is 0.9430 on average and is 0.5920 for the worst //per sample error is 0.0451 on average and is 0.3552 for the worst99 and is 0.0831 for the worst50 //per source data error is 0.0230 on average and is 0.2561 for the worst99 and is 0.0303 for the worst50
+save model
+epoch=3600, avg_loss=1.66e-03, kld=18.41, recon=1.12e-03(max=2.70e-03), time=23756.82, avg_good=391.00, kld_weight=0.000020
+eval in164.65750432014465 //coverage is 0.9364 on average and is 0.5764 for the worst //per sample error is 0.0431 on average and is 0.3346 for the worst99 and is 0.0806 for the worst50 //per source data error is 0.0233 on average and is 0.2584 for the worst99 and is 0.0312 for the worst50
+save model
+epoch=3700, avg_loss=1.66e-03, kld=18.48, recon=1.11e-03(max=3.02e-03), time=24709.14, avg_good=391.00, kld_weight=0.000020
+eval in92.01084923744202 //coverage is 0.9382 on average and is 0.6249 for the worst //per sample error is 0.0446 on average and is 0.3419 for the worst99 and is 0.0847 for the worst50 //per source data error is 0.0236 on average and is 0.2704 for the worst99 and is 0.0306 for the worst50
+save model
+epoch=3800, avg_loss=1.65e-03, kld=18.48, recon=1.11e-03(max=4.33e-03), time=25410.69, avg_good=391.00, kld_weight=0.000020
+eval in98.6555061340332 //coverage is 0.9345 on average and is 0.5306 for the worst //per sample error is 0.0411 on average and is 0.3346 for the worst99 and is 0.0796 for the worst50 //per source data error is 0.0225 on average and is 0.2472 for the worst99 and is 0.0306 for the worst50
+save model
+epoch=3900, avg_loss=1.65e-03, kld=18.48, recon=1.11e-03(max=7.98e-03), time=26100.68, avg_good=391.00, kld_weight=0.000020
+eval in106.7645583152771 //coverage is 0.9287 on average and is 0.6078 for the worst //per sample error is 0.0422 on average and is 0.3388 for the worst99 and is 0.0810 for the worst50 //per source data error is 0.0232 on average and is 0.2433 for the worst99 and is 0.0315 for the worst50
+save model
+epoch=4000, avg_loss=1.65e-03, kld=18.49, recon=1.11e-03(max=5.48e-03), time=26754.37, avg_good=391.00, kld_weight=0.000020
+eval in652.4601676464081 //coverage is 0.9932 on average and is 0.8887 for the worst //per sample error is 0.0428 on average and is 0.3478 for the worst99 and is 0.0880 for the worst50 //per source data error is 0.0161 on average and is 0.1407 for the worst99 and is 0.0221 for the worst50
+save model
+epoch=4100, avg_loss=1.65e-03, kld=18.44, recon=1.11e-03(max=8.60e-03), time=28000.13, avg_good=391.00, kld_weight=0.000020
+eval in92.3299024105072 //coverage is 0.9388 on average and is 0.6208 for the worst //per sample error is 0.0462 on average and is 0.4045 for the worst99 and is 0.0810 for the worst50 //per source data error is 0.0243 on average and is 0.2246 for the worst99 and is 0.0309 for the worst50
+save model
+epoch=4200, avg_loss=1.64e-03, kld=18.49, recon=1.10e-03(max=6.10e-03), time=28796.84, avg_good=391.00, kld_weight=0.000020
+eval in156.69608545303345 //coverage is 0.9248 on average and is 0.6282 for the worst //per sample error is 0.0422 on average and is 0.3054 for the worst99 and is 0.0813 for the worst50 //per source data error is 0.0241 on average and is 0.2654 for the worst99 and is 0.0311 for the worst50
+save model
+epoch=4300, avg_loss=1.64e-03, kld=18.52, recon=1.10e-03(max=3.24e-03), time=29733.58, avg_good=391.00, kld_weight=0.000020
+eval in121.82544994354248 //coverage is 0.9317 on average and is 0.5952 for the worst //per sample error is 0.0427 on average and is 0.3316 for the worst99 and is 0.0815 for the worst50 //per source data error is 0.0236 on average and is 0.2478 for the worst99 and is 0.0309 for the worst50
+save model
+epoch=4400, avg_loss=1.64e-03, kld=18.59, recon=1.09e-03(max=4.14e-03), time=30549.61, avg_good=391.00, kld_weight=0.000020
+eval in69.92490124702454 //coverage is 0.9357 on average and is 0.5788 for the worst //per sample error is 0.0422 on average and is 0.3140 for the worst99 and is 0.0810 for the worst50 //per source data error is 0.0237 on average and is 0.2628 for the worst99 and is 0.0307 for the worst50
+save model
+epoch=4500, avg_loss=1.63e-03, kld=18.53, recon=1.10e-03(max=3.59e-03), time=31267.79, avg_good=391.00, kld_weight=0.000020
+eval in101.97187042236328 //coverage is 0.9376 on average and is 0.5750 for the worst //per sample error is 0.0448 on average and is 0.3372 for the worst99 and is 0.0830 for the worst50 //per source data error is 0.0245 on average and is 0.2577 for the worst99 and is 0.0308 for the worst50
+save model
+epoch=4600, avg_loss=1.63e-03, kld=18.57, recon=1.09e-03(max=6.25e-03), time=32024.04, avg_good=391.00, kld_weight=0.000020
+eval in115.75708436965942 //coverage is 0.9292 on average and is 0.5977 for the worst //per sample error is 0.0413 on average and is 0.3693 for the worst99 and is 0.0814 for the worst50 //per source data error is 0.0234 on average and is 0.2730 for the worst99 and is 0.0308 for the worst50
+save model
+epoch=4700, avg_loss=1.63e-03, kld=18.59, recon=1.09e-03(max=3.50e-03), time=32798.38, avg_good=391.00, kld_weight=0.000020
+eval in100.09812331199646 //coverage is 0.9366 on average and is 0.5975 for the worst //per sample error is 0.0461 on average and is 0.4182 for the worst99 and is 0.0845 for the worst50 //per source data error is 0.0246 on average and is 0.2643 for the worst99 and is 0.0303 for the worst50
+save model
+epoch=4800, avg_loss=1.63e-03, kld=18.59, recon=1.09e-03(max=2.86e-03), time=33748.00, avg_good=391.00, kld_weight=0.000020
+eval in123.36955523490906 //coverage is 0.9324 on average and is 0.5607 for the worst //per sample error is 0.0434 on average and is 0.3876 for the worst99 and is 0.0809 for the worst50 //per source data error is 0.0232 on average and is 0.2661 for the worst99 and is 0.0300 for the worst50
+save model
+epoch=4900, avg_loss=1.63e-03, kld=18.69, recon=1.09e-03(max=4.03e-03), time=34486.42, avg_good=391.00, kld_weight=0.000020
+eval in98.5015025138855 //coverage is 0.9380 on average and is 0.6471 for the worst //per sample error is 0.0426 on average and is 0.3521 for the worst99 and is 0.0799 for the worst50 //per source data error is 0.0229 on average and is 0.2508 for the worst99 and is 0.0300 for the worst50
+save model
+epoch=5000, avg_loss=1.63e-03, kld=18.60, recon=1.08e-03(max=3.55e-03), time=35158.01, avg_good=391.00, kld_weight=0.000020
+eval in876.7593672275543 //coverage is 0.9922 on average and is 0.8561 for the worst //per sample error is 0.0420 on average and is 0.3553 for the worst99 and is 0.0866 for the worst50 //per source data error is 0.0159 on average and is 0.1014 for the worst99 and is 0.0215 for the worst50
+epoch=5100, avg_loss=1.62e-03, kld=18.72, recon=1.08e-03(max=3.10e-03), time=36496.99, avg_good=391.00, kld_weight=0.000020
+eval in50.6429603099823 //coverage is 0.9483 on average and is 0.6182 for the worst //per sample error is 0.0437 on average and is 0.3235 for the worst99 and is 0.0841 for the worst50 //per source data error is 0.0226 on average and is 0.2487 for the worst99 and is 0.0296 for the worst50
+save model
+epoch=5200, avg_loss=1.62e-03, kld=18.71, recon=1.07e-03(max=5.56e-03), time=37101.91, avg_good=391.00, kld_weight=0.000020
+eval in122.72042417526245 //coverage is 0.9336 on average and is 0.5540 for the worst //per sample error is 0.0431 on average and is 0.3565 for the worst99 and is 0.0818 for the worst50 //per source data error is 0.0239 on average and is 0.2461 for the worst99 and is 0.0319 for the worst50
+save model
+epoch=5300, avg_loss=1.62e-03, kld=18.70, recon=1.08e-03(max=6.33e-03), time=37823.34, avg_good=391.00, kld_weight=0.000020
+eval in79.91658163070679 //coverage is 0.9381 on average and is 0.6099 for the worst //per sample error is 0.0438 on average and is 0.3656 for the worst99 and is 0.0838 for the worst50 //per source data error is 0.0226 on average and is 0.2430 for the worst99 and is 0.0307 for the worst50
+epoch=5400, avg_loss=1.62e-03, kld=18.66, recon=1.08e-03(max=3.42e-03), time=38744.44, avg_good=391.00, kld_weight=0.000020
+eval in141.99557065963745 //coverage is 0.9349 on average and is 0.6000 for the worst //per sample error is 0.0423 on average and is 0.3498 for the worst99 and is 0.0800 for the worst50 //per source data error is 0.0232 on average and is 0.2570 for the worst99 and is 0.0310 for the worst50
+save model
+epoch=5500, avg_loss=1.61e-03, kld=18.74, recon=1.07e-03(max=4.30e-03), time=39703.28, avg_good=391.00, kld_weight=0.000020
+eval in122.68281483650208 //coverage is 0.9359 on average and is 0.6202 for the worst //per sample error is 0.0423 on average and is 0.3533 for the worst99 and is 0.0809 for the worst50 //per source data error is 0.0235 on average and is 0.2591 for the worst99 and is 0.0310 for the worst50
+save model
+epoch=5600, avg_loss=1.61e-03, kld=18.74, recon=1.07e-03(max=5.25e-03), time=40596.16, avg_good=391.00, kld_weight=0.000020
+eval in97.29916191101074 //coverage is 0.9364 on average and is 0.5812 for the worst //per sample error is 0.0422 on average and is 0.3570 for the worst99 and is 0.0816 for the worst50 //per source data error is 0.0234 on average and is 0.2547 for the worst99 and is 0.0315 for the worst50
+save model
+epoch=5700, avg_loss=1.61e-03, kld=18.71, recon=1.07e-03(max=5.27e-03), time=41314.34, avg_good=391.00, kld_weight=0.000020
+eval in97.55134725570679 //coverage is 0.9351 on average and is 0.5868 for the worst //per sample error is 0.0450 on average and is 0.4956 for the worst99 and is 0.0843 for the worst50 //per source data error is 0.0237 on average and is 0.2420 for the worst99 and is 0.0302 for the worst50
+save model
+epoch=5800, avg_loss=1.61e-03, kld=18.71, recon=1.07e-03(max=4.55e-03), time=42048.12, avg_good=391.00, kld_weight=0.000020
+eval in87.90405297279358 //coverage is 0.9349 on average and is 0.5937 for the worst //per sample error is 0.0427 on average and is 0.3463 for the worst99 and is 0.0788 for the worst50 //per source data error is 0.0234 on average and is 0.2368 for the worst99 and is 0.0297 for the worst50
+epoch=5900, avg_loss=1.61e-03, kld=18.80, recon=1.06e-03(max=4.09e-03), time=42759.15, avg_good=391.00, kld_weight=0.000020
+eval in93.97042942047119 //coverage is 0.9339 on average and is 0.5769 for the worst //per sample error is 0.0414 on average and is 0.3278 for the worst99 and is 0.0817 for the worst50 //per source data error is 0.0232 on average and is 0.2441 for the worst99 and is 0.0313 for the worst50
+epoch=6000, avg_loss=1.61e-03, kld=18.72, recon=1.07e-03(max=6.56e-03), time=43419.02, avg_good=391.00, kld_weight=0.000020
+eval in717.9504871368408 //coverage is 0.9959 on average and is 0.9286 for the worst //per sample error is 0.0440 on average and is 0.4162 for the worst99 and is 0.0881 for the worst50 //per source data error is 0.0160 on average and is 0.1294 for the worst99 and is 0.0215 for the worst50
+save model
+epoch=6100, avg_loss=1.60e-03, kld=18.85, recon=1.06e-03(max=4.05e-03), time=44846.98, avg_good=391.00, kld_weight=0.000020
+eval in128.01615357398987 //coverage is 0.9438 on average and is 0.6151 for the worst //per sample error is 0.0418 on average and is 0.3262 for the worst99 and is 0.0820 for the worst50 //per source data error is 0.0228 on average and is 0.2398 for the worst99 and is 0.0299 for the worst50
+save model
+epoch=6200, avg_loss=1.60e-03, kld=18.73, recon=1.07e-03(max=4.00e-03), time=45844.44, avg_good=391.00, kld_weight=0.000020
+eval in109.78561449050903 //coverage is 0.9307 on average and is 0.5978 for the worst //per sample error is 0.0450 on average and is 0.3706 for the worst99 and is 0.0818 for the worst50 //per source data error is 0.0246 on average and is 0.2706 for the worst99 and is 0.0305 for the worst50
+save model
+epoch=6300, avg_loss=1.60e-03, kld=18.91, recon=1.05e-03(max=2.76e-03), time=46682.54, avg_good=391.00, kld_weight=0.000020
+eval in71.83764123916626 //coverage is 0.9396 on average and is 0.6153 for the worst //per sample error is 0.0450 on average and is 0.3457 for the worst99 and is 0.0805 for the worst50 //per source data error is 0.0251 on average and is 0.2850 for the worst99 and is 0.0307 for the worst50
+save model
+epoch=6400, avg_loss=1.60e-03, kld=18.86, recon=1.06e-03(max=4.03e-03), time=47380.86, avg_good=391.00, kld_weight=0.000020
+eval in66.08622646331787 //coverage is 0.9370 on average and is 0.5499 for the worst //per sample error is 0.0454 on average and is 0.3966 for the worst99 and is 0.0830 for the worst50 //per source data error is 0.0240 on average and is 0.2536 for the worst99 and is 0.0294 for the worst50
+save model
+epoch=6500, avg_loss=1.59e-03, kld=18.85, recon=1.05e-03(max=8.04e-03), time=48072.28, avg_good=391.00, kld_weight=0.000020
+eval in78.73055696487427 //coverage is 0.9345 on average and is 0.5567 for the worst //per sample error is 0.0435 on average and is 0.3839 for the worst99 and is 0.0822 for the worst50 //per source data error is 0.0234 on average and is 0.2585 for the worst99 and is 0.0305 for the worst50
+save mode
+epoch=6600, avg_loss=1.86e-03, kld=18.88, recon=1.05e-03(max=2.52e-03), time=48589.29, avg_good=391.00, kld_weight=0.000020
+in56.06020522117615 //coverage is 0.9414 on average and is 0.6246 for the worst //per sample error is 0.0407 on average and is 0.2855 for the worst99 and is 0.0823 for the worst50 //per source data error is 0.0230 on average and is 0.2637 for the worst99 and is 0.0297 for the worst50
+      epoch=6700, avg_loss=1.59e-03, kld=18.98, recon=1.04e-03(max=3.86e-03), time=49188.42, avg_good=391.00, kld_weight=0.000020
+eval in88.45663261413574 //coverage is 0.9386 on average and is 0.5120 for the worst //per sample error is 0.0427 on average and is 0.3241 for the worst99 and is 0.0828 for the worst50 //per source data error is 0.0235 on average and is 0.2423 for the worst99 and is 0.0298 for the worst50
+save model
+epoch=6800, avg_loss=1.59e-03, kld=18.97, recon=1.04e-03(max=2.53e-03), time=49926.91, avg_good=391.00, kld_weight=0.000020
+eval in104.63470673561096 //coverage is 0.9312 on average and is 0.5944 for the worst //per sample error is 0.0431 on average and is 0.3984 for the worst99 and is 0.0796 for the worst50 //per source data error is 0.0232 on average and is 0.2562 for the worst99 and is 0.0312 for the worst50
+save model
+epoch=6900, avg_loss=1.59e-03, kld=19.05, recon=1.04e-03(max=2.78e-03), time=50846.45, avg_good=391.00, kld_weight=0.000020
+eval in93.93808650970459 //coverage is 0.9468 on average and is 0.5999 for the worst //per sample error is 0.0443 on average and is 0.4380 for the worst99 and is 0.0826 for the worst50 //per source data error is 0.0223 on average and is 0.2527 for the worst99 and is 0.0294 for the worst50
+save model
+epoch=7000, avg_loss=1.58e-03, kld=19.02, recon=1.04e-03(max=3.75e-03), time=51767.26, avg_good=391.00, kld_weight=0.000020
+eval in885.9427573680878 //coverage is 0.9941 on average and is 0.9090 for the worst //per sample error is 0.0410 on average and is 0.3346 for the worst99 and is 0.0840 for the worst50 //per source data error is 0.0167 on average and is 0.1459 for the worst99 and is 0.0229 for the worst50
+save model
+epoch=7100, avg_loss=1.58e-03, kld=18.98, recon=1.04e-03(max=3.58e-03), time=53301.37, avg_good=391.00, kld_weight=0.000020
+eval in97.76067328453064 //coverage is 0.9338 on average and is 0.6184 for the worst //per sample error is 0.0418 on average and is 0.3862 for the worst99 and is 0.0811 for the worst50 //per source data error is 0.0231 on average and is 0.2364 for the worst99 and is 0.0310 for the worst50
+save model
+epoch=7200, avg_loss=1.60e-03, kld=19.02, recon=1.04e-03(max=3.25e-03), time=54081.23, avg_good=391.00, kld_weight=0.000020
+eval in73.8718044757843 //coverage is 0.9460 on average and is 0.6063 for the worst //per sample error is 0.0422 on average and is 0.3459 for the worst99 and is 0.0815 for the worst50 //per source data error is 0.0232 on average and is 0.2655 for the worst99 and is 0.0302 for the worst50
+epoch=7300, avg_loss=1.58e-03, kld=18.97, recon=1.05e-03(max=4.06e-03), time=54904.77, avg_good=391.00, kld_weight=0.000020
+eval in105.80040097236633 //coverage is 0.9406 on average and is 0.6104 for the worst //per sample error is 0.0439 on average and is 0.3473 for the worst99 and is 0.0833 for the worst50 //per source data error is 0.0231 on average and is 0.2406 for the worst99 and is 0.0296 for the worst50
+save model
+epoch=7400, avg_loss=1.57e-02, kld=19.00, recon=1.04e-03(max=4.62e-03), time=55791.08, avg_good=391.00, kld_weight=0.000020
+eval in124.82842659950256 //coverage is 0.9330 on average and is 0.5579 for the worst //per sample error is 0.0438 on average and is 0.4314 for the worst99 and is 0.0821 for the worst50 //per source data error is 0.0232 on average and is 0.2530 for the worst99 and is 0.0319 for the worst50
+epoch=7500, avg_loss=1.58e-03, kld=19.08, recon=1.05e-03(max=6.03e-03), time=56669.52, avg_good=391.00, kld_weight=0.000020
+eval in98.99059295654297 //coverage is 0.9432 on average and is 0.5802 for the worst //per sample error is 0.0430 on average and is 0.3532 for the worst99 and is 0.0843 for the worst50 //per source data error is 0.0228 on average and is 0.2574 for the worst99 and is 0.0292 for the worst50
+save model
+epoch=7600, avg_loss=4.94e-03, kld=19.04, recon=1.04e-03(max=4.38e-03), time=57301.02, avg_good=391.00, kld_weight=0.000020
+eval in87.5967104434967 //coverage is 0.9381 on average and is 0.5999 for the worst //per sample error is 0.0441 on average and is 0.4385 for the worst99 and is 0.0816 for the worst50 //per source data error is 0.0239 on average and is 0.2511 for the worst99 and is 0.0306 for the worst50
+epoch=7700, avg_loss=1.59e-03, kld=19.10, recon=1.03e-03(max=5.10e-03), time=57950.30, avg_good=391.00, kld_weight=0.000020
+eval in81.24124670028687 //coverage is 0.9311 on average and is 0.5846 for the worst //per sample error is 0.0451 on average and is 0.4756 for the worst99 and is 0.0806 for the worst50 //per source data error is 0.0239 on average and is 0.2586 for the worst99 and is 0.0316 for the worst50
+epoch=7800, avg_loss=1.58e-03, kld=19.08, recon=1.03e-03(max=3.29e-03), time=58545.69, avg_good=391.00, kld_weight=0.000020
+eval in94.95536065101624 //coverage is 0.9443 on average and is 0.6497 for the worst //per sample error is 0.0427 on average and is 0.3497 for the worst99 and is 0.0813 for the worst50 //per source data error is 0.0237 on average and is 0.2461 for the worst99 and is 0.0306 for the worst50
+epoch=7900, avg_loss=7.18e+13, kld=19.07, recon=1.03e-03(max=2.52e-03), time=59294.16, avg_good=391.00, kld_weight=0.000020
+eval in89.39182758331299 //coverage is 0.9427 on average and is 0.6021 for the worst //per sample error is 0.0435 on average and is 0.3719 for the worst99 and is 0.0825 for the worst50 //per source data error is 0.0227 on average and is 0.2285 for the worst99 and is 0.0292 for the worst50
+epoch=8000, avg_loss=1.58e-03, kld=19.10, recon=1.03e-03(max=3.40e-03), time=60006.36, avg_good=391.00, kld_weight=0.000020
+eval in941.3272459506989 //coverage is 0.9925 on average and is 0.8333 for the worst //per sample error is 0.0433 on average and is 0.3461 for the worst99 and is 0.0847 for the worst50 //per source data error is 0.0164 on average and is 0.1638 for the worst99 and is 0.0227 for the worst50
+epoch=8100, avg_loss=2.41e+03, kld=19.12, recon=1.03e-03(max=3.30e-03), time=61667.28, avg_good=391.00, kld_weight=0.000020
+eval in100.15308809280396 //coverage is 0.9400 on average and is 0.6068 for the worst //per sample error is 0.0424 on average and is 0.3498 for the worst99 and is 0.0806 for the worst50 //per source data error is 0.0223 on average and is 0.2457 for the worst99 and is 0.0311 for the worst50
+epoch=8200, avg_loss=1.58e-03, kld=19.04, recon=1.03e-03(max=2.58e-03), time=62172.68, avg_good=391.00, kld_weight=0.000020
+eval in62.454878091812134 //coverage is 0.9416 on average and is 0.6000 for the worst //per sample error is 0.0430 on average and is 0.4018 for the worst99 and is 0.0815 for the worst50 //per source data error is 0.0241 on average and is 0.2676 for the worst99 and is 0.0311 for the worst50
+save model
+epoch=8300, avg_loss=1.58e-03, kld=19.04, recon=1.03e-03(max=7.76e-03), time=62841.40, avg_good=391.00, kld_weight=0.000020
+eval in105.25302982330322 //coverage is 0.9328 on average and is 0.6092 for the worst //per sample error is 0.0426 on average and is 0.3905 for the worst99 and is 0.0814 for the worst50 //per source data error is 0.0235 on average and is 0.2537 for the worst99 and is 0.0307 for the worst50
+save model
+epoch=8400, avg_loss=1.57e-03, kld=19.07, recon=1.03e-03(max=1.40e-02), time=63940.19, avg_good=391.00, kld_weight=0.000020
+eval in130.31818318367004 //coverage is 0.9363 on average and is 0.5733 for the worst //per sample error is 0.0444 on average and is 0.3818 for the worst99 and is 0.0827 for the worst50 //per source data error is 0.0242 on average and is 0.2705 for the worst99 and is 0.0308 for the worst50
+save model
+epoch=8500, avg_loss=1.57e-03, kld=19.08, recon=1.03e-03(max=4.19e-03), time=64896.56, avg_good=391.00, kld_weight=0.000020
+eval in142.97786498069763 //coverage is 0.9320 on average and is 0.5973 for the worst //per sample error is 0.0420 on average and is 0.3923 for the worst99 and is 0.0793 for the worst50 //per source data error is 0.0233 on average and is 0.2533 for the worst99 and is 0.0308 for the worst50
+save model
+epoch=8600, avg_loss=1.57e-03, kld=19.14, recon=1.02e-03(max=2.84e-03), time=65828.45, avg_good=391.00, kld_weight=0.000020
+eval in145.45630955696106 //coverage is 0.9348 on average and is 0.5474 for the worst //per sample error is 0.0441 on average and is 0.5738 for the worst99 and is 0.0814 for the worst50 //per source data error is 0.0239 on average and is 0.2558 for the worst99 and is 0.0306 for the worst50
+save model
+epoch=8700, avg_loss=6.44e+05, kld=19.21, recon=1.02e-03(max=2.52e-03), time=66804.98, avg_good=391.00, kld_weight=0.000020
+eval in97.237877368927 //coverage is 0.9464 on average and is 0.6232 for the worst //per sample error is 0.0438 on average and is 0.4685 for the worst99 and is 0.0836 for the worst50 //per source data error is 0.0231 on average and is 0.2490 for the worst99 and is 0.0289 for the worst50
+epoch=8800, avg_loss=1.82e-03, kld=19.04, recon=1.03e-03(max=1.66e-02), time=67749.87, avg_good=391.00, kld_weight=0.000020
+eval in109.90887188911438 //coverage is 0.9349 on average and is 0.6219 for the worst //per sample error is 0.0454 on average and is 0.4595 for the worst99 and is 0.0794 for the worst50 //per source data error is 0.0244 on average and is 0.2598 for the worst99 and is 0.0317 for the worst50
+epoch=8900, avg_loss=6.12e-03, kld=19.20, recon=1.02e-03(max=3.47e-03), time=68499.35, avg_good=391.00, kld_weight=0.000020
+eval in107.0611801147461 //coverage is 0.9375 on average and is 0.6071 for the worst //per sample error is 0.0434 on average and is 0.4316 for the worst99 and is 0.0806 for the worst50 //per source data error is 0.0239 on average and is 0.2729 for the worst99 and is 0.0307 for the worst50
+epoch=9000, avg_loss=1.58e-03, kld=19.23, recon=1.02e-03(max=4.91e-03), time=69228.07, avg_good=391.00, kld_weight=0.000020
+eval in733.8059906959534 //coverage is 0.9955 on average and is 0.9165 for the worst //per sample error is 0.0422 on average and is 0.4113 for the worst99 and is 0.0849 for the worst50 //per source data error is 0.0160 on average and is 0.1096 for the worst99 and is 0.0219 for the worst50
+epoch=9100, avg_loss=4.70e+13, kld=19.23, recon=1.01e-03(max=4.83e-03), time=70812.37, avg_good=391.00, kld_weight=0.000020
+eval in133.3805856704712 //coverage is 0.9451 on average and is 0.6129 for the worst //per sample error is 0.0450 on average and is 0.4591 for the worst99 and is 0.0828 for the worst50 //per source data error is 0.0231 on average and is 0.2422 for the worst99 and is 0.0295 for the worst50
+epoch=9200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=71815.62, avg_good=391.00, kld_weight=0.000020
+eval in132.01551938056946 //coverage is 0.2946 on average and is 0.0112 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=72545.59, avg_good=391.00, kld_weight=0.000020
+eval in93.63093686103821 //coverage is 0.2946 on average and is 0.0127 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9400, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=73238.56, avg_good=391.00, kld_weight=0.000020
+eval in92.31575131416321 //coverage is 0.2861 on average and is 0.0125 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9500, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=73977.35, avg_good=391.00, kld_weight=0.000020
+eval in96.37672519683838 //coverage is 0.2969 on average and is 0.0139 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9600, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=74683.60, avg_good=391.00, kld_weight=0.000020
+eval in82.30924201011658 //coverage is 0.3102 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9700, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=75408.09, avg_good=391.00, kld_weight=0.000020
+eval in133.10171389579773 //coverage is 0.2880 on average and is 0.0114 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9800, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=76391.43, avg_good=391.00, kld_weight=0.000020
+eval in119.43049359321594 //coverage is 0.2832 on average and is 0.0109 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=9900, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=77179.11, avg_good=391.00, kld_weight=0.000020
+eval in112.97642540931702 //coverage is 0.2669 on average and is 0.0125 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10000, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=77977.02, avg_good=391.00, kld_weight=0.000020
+eval in596.8903934955597 //coverage is 0.2914 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10100, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=79302.98, avg_good=391.00, kld_weight=0.000020
+eval in133.02321577072144 //coverage is 0.3011 on average and is 0.0116 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=80217.53, avg_good=391.00, kld_weight=0.000020
+eval in122.55635786056519 //coverage is 0.3002 on average and is 0.0122 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=81194.02, avg_good=391.00, kld_weight=0.000020
+eval in127.87599921226501 //coverage is 0.3170 on average and is 0.0139 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10400, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=81937.86, avg_good=391.00, kld_weight=0.000020
+eval in90.77008986473083 //coverage is 0.2948 on average and is 0.0116 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10500, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=82592.69, avg_good=391.00, kld_weight=0.000020
+eval in80.82392477989197 //coverage is 0.2964 on average and is 0.0119 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10600, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=83260.40, avg_good=391.00, kld_weight=0.000020
+eval in85.57118797302246 //coverage is 0.3022 on average and is 0.0141 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10700, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=83956.46, avg_good=391.00, kld_weight=0.000020
+eval in85.90312433242798 //coverage is 0.3000 on average and is 0.0133 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10800, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=84621.31, avg_good=391.00, kld_weight=0.000020
+eval in88.20794916152954 //coverage is 0.2950 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=10900, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=85310.60, avg_good=391.00, kld_weight=0.000020
+eval in83.95370078086853 //coverage is 0.2913 on average and is 0.0119 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11000, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=85964.63, avg_good=391.00, kld_weight=0.000020
+eval in813.8508358001709 //coverage is 0.3002 on average and is 0.0125 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11100, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=87451.75, avg_good=391.00, kld_weight=0.000020
+eval in158.02061891555786 //coverage is 0.3113 on average and is 0.0125 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=88427.39, avg_good=391.00, kld_weight=0.000020
+eval in116.73854613304138 //coverage is 0.3025 on average and is 0.0128 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=89340.86, avg_good=391.00, kld_weight=0.000020
+eval in101.07101058959961 //coverage is 0.2867 on average and is 0.0123 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11400, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=90090.53, avg_good=391.00, kld_weight=0.000020
+eval in87.6258933544159 //coverage is 0.3140 on average and is 0.0145 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11500, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=90802.39, avg_good=391.00, kld_weight=0.000020
+eval in91.94921731948853 //coverage is 0.3072 on average and is 0.0119 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11600, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=91516.34, avg_good=391.00, kld_weight=0.000020
+eval in119.63916850090027 //coverage is 0.3125 on average and is 0.0139 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11700, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=92439.73, avg_good=391.00, kld_weight=0.000020
+eval in114.6893401145935 //coverage is 0.2817 on average and is 0.0123 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11800, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=93340.54, avg_good=391.00, kld_weight=0.000020
+eval in93.71257758140564 //coverage is 0.3042 on average and is 0.0130 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=11900, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=94173.98, avg_good=391.00, kld_weight=0.000020
+eval in97.87691760063171 //coverage is 0.2893 on average and is 0.0139 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12000, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=95032.84, avg_good=391.00, kld_weight=0.000020
+eval in954.4782521724701 //coverage is 0.3068 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12100, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=96604.58, avg_good=391.00, kld_weight=0.000020
+eval in81.0687198638916 //coverage is 0.3244 on average and is 0.0135 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12200, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=97450.05, avg_good=391.00, kld_weight=0.000020
+eval in109.04200387001038 //coverage is 0.2961 on average and is 0.0133 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12300, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=98313.52, avg_good=391.00, kld_weight=0.000020
+eval in140.36829829216003 //coverage is 0.2928 on average and is 0.0132 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12400, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=99109.15, avg_good=391.00, kld_weight=0.000020
+eval in99.69338369369507 //coverage is 0.2775 on average and is 0.0122 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12500, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=99909.07, avg_good=391.00, kld_weight=0.000020
+eval in119.86932229995728 //coverage is 0.3032 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12600, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=100771.57, avg_good=391.00, kld_weight=0.000020
+eval in142.857727766037 //coverage is 0.2767 on average and is 0.0119 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12700, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=101683.88, avg_good=391.00, kld_weight=0.000020
+eval in112.43220233917236 //coverage is 0.3043 on average and is 0.0137 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12800, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=102529.55, avg_good=391.00, kld_weight=0.000020
+eval in95.64896440505981 //coverage is 0.3071 on average and is 0.0128 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50
+epoch=12900, avg_loss=nan, kld=nan, recon=nan(max=0.00e+00), time=103410.40, avg_good=391.00, kld_weight=0.000020
+eval in140.5749113559723 //coverage is 0.2871 on average and is 0.0115 for the worst //per sample error is nan on average and is nan for the worst99 and is nan for the worst50 //per source data error is nan on average and is nan for the worst99 and is nan for the worst50

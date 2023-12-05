@@ -12,7 +12,7 @@ from torch import nn, Tensor
 from typing import List
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
-# from torchsummary import summary
+from torchsummary import summary
 from utils.get_dataset import *
 from contextlib import nullcontext
 from dataclasses import dataclass
@@ -56,7 +56,7 @@ class SizeDecoder(torch.nn.Module):
                 nn.Sequential(
                     nn.Linear(in_dim, out_features=h_dim,),
                     nn.ReLU())
-                    # nn.LayerNorm(h_dim))
+                #    ,nn.LayerNorm(h_dim))
             )
             in_dim = h_dim
         self.output = nn.Linear(hidden_dims[-1], output_dim)
@@ -74,13 +74,87 @@ def reparameterize(mu: Tensor, logvar: Tensor) -> Tensor:
     eps = torch.randn_like(std)
     return eps * std + mu
 
+def compute_inv_mult_quad(x1: Tensor,
+                               x2: Tensor,
+                               eps: float = 1e-7) -> Tensor:
+        """
+        Computes the Inverse Multi-Quadratics Kernel between x1 and x2,
+        given by
+
+                k(x_1, x_2) = \sum \frac{C}{C + \|x_1 - x_2 \|^2}
+        :param x1: (Tensor)
+        :param x2: (Tensor)
+        :param eps: (Float)
+        :return:
+        """
+        z_dim = x2.size(-1)
+        C = 2 * z_dim * 2.0
+        kernel = C / (eps + C + (x1 - x2).pow(2).sum(dim = -1))
+
+        # Exclude diagonal elements
+        result = kernel.sum() - kernel.diag().sum()
+
+        return result
+
+
+def compute_rbf(x1: Tensor,
+                    x2: Tensor,
+                    eps: float = 1e-7) -> Tensor:
+        """
+        Computes the RBF Kernel between x1 and x2.
+        :param x1: (Tensor)
+        :param x2: (Tensor)
+        :param eps: (Float)
+        :return:
+        """
+        z_dim = x2.size(-1)
+        sigma = 2. * z_dim * 2.0
+
+        result = torch.exp(-((x1 - x2).pow(2).mean(-1) / sigma))
+        return result
+
+def compute_kernel(    x1: Tensor,
+                       x2: Tensor) -> Tensor:
+        # Convert the tensors into row and column vectors
+        D = x1.size(1)
+        N = x1.size(0)
+
+        x1 = x1.unsqueeze(-2) # Make it into a column tensor
+        x2 = x2.unsqueeze(-3) # Make it into a row tensor
+
+        """
+        Usually the below lines are not required, especially in our case,
+        but this is useful when x1 and x2 have different sizes
+        along the 0th dimension.
+        """
+        x1 = x1.expand(N, N, D)
+        x2 = x2.expand(N, N, D)
+
+        # result = compute_rbf(x1, x2)
+        
+        result = compute_inv_mult_quad(x1, x2)
+
+        return result
+
+def compute_mmd(z):
+    prior_z = torch.randn_like(z)
+    
+    prior_z__kernel = compute_kernel(prior_z, prior_z)
+    z__kernel = compute_kernel(z, z)
+    priorz_z__kernel = compute_kernel(prior_z, z)
+
+    mmd = prior_z__kernel.mean() + \
+              z__kernel.mean() - \
+              2 * priorz_z__kernel.mean()
+    return mmd
 
 def train(encoder, decoder, dataset, optimizer):
     dataloader = DataLoader(dataset, batch_size=256, shuffle=True)
     encoder.train()
     decoder.train()
-    epoch_loss, epoch_kld, epoch_recon, sample_num, epoch_max_loss = 0, 0, 0, 0, 0
+    epoch_loss, epoch_kld, epoch_recon, sample_num, epoch_max_loss, epoch_good = 0, 0, 0, 0, 0,0
     max_loss_weight = 0.1
+    mmd_loss_weight = 0.0002
     for size_data, condition in dataloader:
         optimizer.zero_grad()
         size_data, condition = size_data.float().to(device), condition.float().to(device)
@@ -90,20 +164,24 @@ def train(encoder, decoder, dataset, optimizer):
         recon_loss = F.l1_loss(y, size_data)
         max_recon_loss = torch.max(torch.abs(y - size_data).mean(dim=1))
         kld_loss = torch.mean(-0.5 * torch.sum(1 + var - mu ** 2 - var.exp(), dim = 1), dim = 0)
-        loss = recon_loss  + kld_weight * kld_loss #+ max_loss_weight * max_recon_loss
-        if kld_loss.item() < 99:
+        mmd_loss = compute_mmd(z)
+        loss = recon_loss  + kld_weight * kld_loss + max_loss_weight * max_recon_loss + mmd_loss * mmd_loss_weight
+        if True or kld_loss.item() < 200:
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(parameters=encoder.parameters(), max_norm=1, norm_type=np.inf)
+            torch.nn.utils.clip_grad_norm_(parameters=decoder.parameters(), max_norm=1, norm_type=np.inf)
             optimizer.step()
             epoch_loss += loss.item() * len(size_data)
             epoch_kld += kld_loss.item() * len(size_data)
             epoch_recon += recon_loss.item() * len(size_data)
             epoch_max_loss = max(epoch_max_loss, max_recon_loss.item())
             sample_num += len(size_data)
+            epoch_good+=1
 
     epoch_loss /= sample_num
     epoch_recon /= sample_num
     epoch_kld /= sample_num
-    return epoch_loss, epoch_recon, epoch_kld, epoch_max_loss
+    return epoch_loss, epoch_recon, epoch_kld, epoch_max_loss,epoch_good
 
 
 def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, test_size=100):
@@ -188,7 +266,7 @@ def get_locality(pairdata, freqpairs,pairsize):
     return locality_strings, np.array(locality_onehots), pair_counts, condition_size, locality_onehots_dict
 
 def get_kld_weight(epoch=0):
-    kld_max=1e-4
+    kld_max=2e-5
     kld_min=1e-6
     if epoch<1000:
         return (kld_max-kld_min)*((epoch)/1000.0)+kld_min
@@ -212,22 +290,24 @@ if __name__ == "__main__":
     # print(dataset[0][0].shape)
     # exit()
     
-    hidden_dims = [768, 512, 256]
-    latent_dim = 32
+    hidden_dims = [768, 512, 256, 128]
+    latent_dim = 64
+    # hidden_dims = [128, 256, 512, 768]
+    # latent_dim = 1024
     encoder = SizeEncoder(n_size, condition_size, hidden_dims, latent_dim).to(device)
     hidden_dims.reverse()
     decoder = SizeDecoder(latent_dim, condition_size, hidden_dims, n_size).to(device)
-    # print('encoder:', summary(encoder, [[n_size], [condition_size]], device=device))
-    # print('decoder:', summary(decoder, [[latent_dim], [condition_size]], device=device))
+    print('encoder:', summary(encoder, [[n_size], [condition_size]], device=device))
+    print('decoder:', summary(decoder, [[latent_dim], [condition_size]], device=device))
     sys.stdout.flush()
     
-    encoder = torch.load('model/2023-11-23-7/encoder2.pth')
-    decoder = torch.load('model/2023-11-23-7/decoder2.pth')
+    # encoder = torch.load('model/2023-11-23-7/encoder2.pth')
+    # decoder = torch.load('model/2023-11-23-7/decoder2.pth')
 
     lr = 1e-4
-    kld_weight = 1e-4#1e-4不行
+    kld_weight = 5e-5#1e-4不行
     optimizer = torch.optim.Adam([{'params': encoder.parameters()}, {'params': decoder.parameters()}], lr=lr)
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.95)
     print('start in:', time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()))
     sys.stdout.flush()
 
@@ -246,14 +326,17 @@ if __name__ == "__main__":
     avg_loss = 0
     min_loss = 1e9
     print_every = 100
+    avg_goood=0
     for epoch in range(100001):
-        # kld_weight = get_kld_weight(epoch)
-        epoch_loss, epoch_recon, epoch_kld, max_loss = train(encoder, decoder, dataset, optimizer)
+        kld_weight = get_kld_weight(epoch)
+        epoch_loss, epoch_recon, epoch_kld, max_loss,epoch_good = train(encoder, decoder, dataset, optimizer)
         avg_loss += epoch_loss
+        avg_goood += epoch_good
         if epoch and epoch % print_every == 0:
             avg_loss /= print_every
+            avg_goood/=print_every
             cur_time = time.time()
-            print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time))
+            print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f, avg_good=%.2f, kld_weight=%.6f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time, avg_goood, kld_weight))
             if epoch % (print_every*10) == 0:
                 evaluate(decoder,sizedata,locality_onehots,latent_dim,locality_onehots_dict,epoch,1000)
             else:
@@ -267,5 +350,6 @@ if __name__ == "__main__":
             # if avg_loss < 1e-3:
             #     break
             avg_loss = 0
+            avg_goood=0
 
     

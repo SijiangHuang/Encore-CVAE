@@ -79,7 +79,7 @@ def train(encoder, decoder, dataset, optimizer):
     dataloader = DataLoader(dataset, batch_size=256, shuffle=True)
     encoder.train()
     decoder.train()
-    epoch_loss, epoch_kld, epoch_recon, sample_num, epoch_max_loss = 0, 0, 0, 0, 0
+    epoch_loss, epoch_kld, epoch_recon, sample_num, epoch_max_loss, epoch_good = 0, 0, 0, 0, 0,0
     max_loss_weight = 0.1
     for size_data, condition in dataloader:
         optimizer.zero_grad()
@@ -99,11 +99,12 @@ def train(encoder, decoder, dataset, optimizer):
             epoch_recon += recon_loss.item() * len(size_data)
             epoch_max_loss = max(epoch_max_loss, max_recon_loss.item())
             sample_num += len(size_data)
+            epoch_good+=1
 
     epoch_loss /= sample_num
     epoch_recon /= sample_num
     epoch_kld /= sample_num
-    return epoch_loss, epoch_recon, epoch_kld, epoch_max_loss
+    return epoch_loss, epoch_recon, epoch_kld, epoch_max_loss,epoch_good
 
 
 def evaluate(decoder,sizedata,locality,latent_dim,locality_onehots_dict,step=0, test_size=100):
@@ -188,7 +189,7 @@ def get_locality(pairdata, freqpairs,pairsize):
     return locality_strings, np.array(locality_onehots), pair_counts, condition_size, locality_onehots_dict
 
 def get_kld_weight(epoch=0):
-    kld_max=1e-4
+    kld_max=2e-5
     kld_min=1e-6
     if epoch<1000:
         return (kld_max-kld_min)*((epoch)/1000.0)+kld_min
@@ -225,7 +226,7 @@ if __name__ == "__main__":
     # decoder = torch.load('model/2023-11-23-7/decoder2.pth')
 
     lr = 1e-4
-    kld_weight = 1e-4#1e-4不行
+    kld_weight = 5e-5#1e-4不行
     optimizer = torch.optim.Adam([{'params': encoder.parameters()}, {'params': decoder.parameters()}], lr=lr)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
     print('start in:', time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()))
@@ -246,14 +247,17 @@ if __name__ == "__main__":
     avg_loss = 0
     min_loss = 1e9
     print_every = 100
+    avg_goood=0
     for epoch in range(100001):
         kld_weight = get_kld_weight(epoch)
-        epoch_loss, epoch_recon, epoch_kld, max_loss = train(encoder, decoder, dataset, optimizer)
+        epoch_loss, epoch_recon, epoch_kld, max_loss,epoch_good = train(encoder, decoder, dataset, optimizer)
         avg_loss += epoch_loss
+        avg_goood += epoch_good
         if epoch and epoch % print_every == 0:
             avg_loss /= print_every
+            avg_goood/=print_every
             cur_time = time.time()
-            print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f,kld_weight=%.6f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time,kld_weight))
+            print("epoch=%d, avg_loss=%.2e, kld=%.2f, recon=%.2e(max=%.2e), time=%.2f, avg_good=%.2f, kld_weight=%.6f" % (epoch, avg_loss, epoch_kld, epoch_recon, max_loss, cur_time - start_time, avg_goood, kld_weight))
             if epoch % (print_every*10) == 0:
                 evaluate(decoder,sizedata,locality_onehots,latent_dim,locality_onehots_dict,epoch,1000)
             else:
@@ -267,5 +271,6 @@ if __name__ == "__main__":
             # if avg_loss < 1e-3:
             #     break
             avg_loss = 0
+            avg_goood=0
 
     
